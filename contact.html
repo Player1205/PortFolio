@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact - Vansh Rana Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=JetBrains+Mono&amp;family=Playfair+Display:ital,wght@1,600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "background": "#FFDAB9",
+                "on-background": "#2C1B18",
+                "surface": "#FFF0E5",
+                "on-surface": "#2C1B18",
+                "surface-variant": "#FFDFCC",
+                "on-surface-variant": "#594844",
+                "surface-container": "#FFE5D1",
+                "surface-container-low": "#FFDAB9",
+                "surface-container-lowest": "#FFF5F0",
+                "surface-container-high": "#FFCCB3",
+                "surface-container-highest": "#FFBF99",
+                "inverse-surface": "#2B1A17",
+                "inverse-on-surface": "#FFEADD",
+                "primary": "#E05A47",
+                "on-primary": "#FFFFFF",
+                "primary-container": "#FFD0C7",
+                "on-primary-container": "#4A1209",
+                "primary-fixed": "#FFB4A6",
+                "primary-fixed-dim": "#E05A47",
+                "on-primary-fixed": "#FFFFFF",
+                "secondary": "#B85C38",
+                "on-secondary": "#FFFFFF",
+                "secondary-container": "#FFD5C2",
+                "on-secondary-container": "#3D1705",
+                "secondary-fixed": "#FFBFA6",
+                "secondary-fixed-dim": "#B85C38",
+                "on-secondary-fixed": "#FFFFFF",
+                "outline": "#B39891",
+                "outline-variant": "#E6CFC9",
+                "error": "#BA1A1A",
+                "on-error": "#FFFFFF",
+                "error-container": "#FFDAD6",
+                "on-error-container": "#410002",
+                "splash-bg": "#FFDAB9",
+                "splash-text": "#E05A47",
+                "tertiary": "#8A5A44",
+                "on-tertiary": "#FFFFFF",
+                "tertiary-container": "#FFDBCF",
+                "on-tertiary-container": "#331607",
+                "tertiary-fixed": "#FFC0A6",
+                "tertiary-fixed-dim": "#8A5A44",
+                "on-tertiary-fixed": "#FFFFFF"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "margin-desktop": "64px",
+                "xl": "48px",
+                "sm": "8px",
+                "md": "16px",
+                "base": "8px",
+                "lg": "24px",
+                "gutter": "24px",
+                "xs": "4px",
+                "margin-mobile": "16px"
+        },
+        "fontFamily": {
+                "headline-xl": [
+                        "Inter"
+                ],
+                "headline-lg": [
+                        "Inter"
+                ],
+                "body-sm": [
+                        "Inter"
+                ],
+                "label-md": [
+                        "Inter"
+                ],
+                "headline-lg-mobile": [
+                        "Inter"
+                ],
+                "code": [
+                        "jetbrainsMono"
+                ],
+                "body-md": [
+                        "Inter"
+                ],
+                "cursive": [
+                        "Playfair Display",
+                        "serif"
+                ]
+        },
+        "fontSize": {
+                "headline-xl": [
+                        "48px",
+                        {
+                                "lineHeight": "56px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "headline-lg": [
+                        "32px",
+                        {
+                                "lineHeight": "40px",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "body-sm": [
+                        "14px",
+                        {
+                                "lineHeight": "20px",
+                                "letterSpacing": "0",
+                                "fontWeight": "400"
+                        }
+                ],
+                "label-md": [
+                        "12px",
+                        {
+                                "lineHeight": "16px",
+                                "letterSpacing": "0.05em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "headline-lg-mobile": [
+                        "24px",
+                        {
+                                "lineHeight": "32px",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "code": [
+                        "14px",
+                        {
+                                "lineHeight": "20px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "24px",
+                                "letterSpacing": "0",
+                                "fontWeight": "400"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        /* Custom Cursor */
+        .custom-cursor {
+            position: fixed;
+            top: 0; left: 0;
+            width: 8px; height: 8px;
+            background-color: #E05A47;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 10000;
+            transform: translate(-50%, -50%);
+            transition: width 0.2s, height 0.2s;
+        }
+        .custom-cursor-follower {
+            position: fixed;
+            top: 0; left: 0;
+            width: 32px; height: 32px;
+            border: 2px solid #E05A47;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+            transition: transform 0.15s ease-out, width 0.2s, height 0.2s, background-color 0.2s;
+        }
+        .custom-cursor.hovering { width: 12px; height: 12px; }
+        .custom-cursor-follower.hovering {
+            width: 48px; height: 48px;
+            background-color: rgba(224, 90, 71, 0.1);
+        }
+        /* Dark Mode Cursor Adjustments */
+        .dark .custom-cursor { background-color: #FFB4A6; }
+        .dark .custom-cursor-follower { border-color: #FFB4A6; }
+        .dark .custom-cursor-follower.hovering { background-color: rgba(255, 180, 166, 0.1); }
+        @media (hover: hover) and (pointer: fine) {
+            body, a, button, input, select, textarea { cursor: none; }
+        }
+
+        /* Marquee Animation */
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+        }
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 30s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* Subtle depth for light mode */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 218, 185, 0.3);
+            box-shadow: 0 4px 24px -4px rgba(116, 89, 63, 0.05);
+        }
+
+        /* Splash Screen Animations */
+        #splash-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #FFDAB9;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+        }
+
+        #splash-screen.slide-up {
+            transform: translateY(-100%);
+        }
+
+        .splash-text-anim {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: splashFadeIn 1s ease forwards 0.5s;
+        }
+
+        @keyframes splashFadeIn {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        body.no-scroll {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background dark:bg-inverse-surface dark:text-inverse-on-surface font-body-md antialiased overflow-x-hidden no-scroll transition-colors duration-500">
+<!-- Splash Screen -->
+<div id="splash-screen">
+<h1 class="font-cursive italic text-5xl md:text-7xl text-splash-text splash-text-anim text-center px-4">
+        Welcome To The Rana Portfolio
+    </h1>
+</div>
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-inverse-surface/80 backdrop-blur-xl bg-surface-container-low dark:bg-[#201311]/50 dark:bg-inverse-surface/50 flat no shadows">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-7xl mx-auto">
+<!-- Brand -->
+<div class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-on-surface dark:text-inverse-on-surface">
+                Vansh Rana
+            </div>
+<!-- Links (Hidden on mobile, flex on md) -->
+<div class="hidden md:flex items-center gap-lg font-label-md text-label-md">
+<a class="text-primary dark:text-primary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim pb-1 hover:bg-primary-container/20 dark:hover:bg-primary-fixed-dim/10 transition-all duration-300 px-3 py-2 rounded-lg scale-95" href="index.html">Home</a>
+<a class="text-secondary dark:text-secondary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim pb-1 hover:text-on-surface dark:text-inverse-on-surface dark:hover:text-on-secondary-fixed hover:bg-primary-container/20 dark:hover:bg-primary-fixed-dim/10 transition-all duration-300 px-3 py-2 rounded-lg" href="work.html">Work</a>
+<a class="text-secondary dark:text-secondary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim pb-1 hover:text-on-surface dark:text-inverse-on-surface dark:hover:text-on-secondary-fixed hover:bg-primary-container/20 dark:hover:bg-primary-fixed-dim/10 transition-all duration-300 px-3 py-2 rounded-lg" href="experience.html">Experience</a>
+<a class="text-secondary dark:text-secondary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim pb-1 hover:text-on-surface dark:text-inverse-on-surface dark:hover:text-on-secondary-fixed hover:bg-primary-container/20 dark:hover:bg-primary-fixed-dim/10 transition-all duration-300 px-3 py-2 rounded-lg" href="skills.html">Skills</a>
+<a class="text-secondary dark:text-secondary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim pb-1 hover:text-on-surface dark:text-inverse-on-surface dark:hover:text-on-secondary-fixed hover:bg-primary-container/20 dark:hover:bg-primary-fixed-dim/10 transition-all duration-300 px-3 py-2 rounded-lg" href="contact.html">Contact</a>
+</div>
+<!-- Trailing Actions -->
+<div class="flex items-center gap-md">
+<a href="Vansh_Rana_Resume.pdf" target="_blank" class="font-label-md text-label-md px-4 py-2 rounded-lg bg-on-surface text-surface dark:bg-primary-fixed-dim dark:text-on-primary-fixed hover:opacity-90 transition-opacity inline-block">Resume</a>
+<button class="p-2 rounded-full text-secondary dark:text-secondary-fixed hover:bg-surface-container-highest dark:bg-[#3d2520] transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="dark_mode">dark_mode</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="w-full max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop pt-32 pb-xl min-h-[70vh] flex flex-col items-center justify-center">
+    <div class="glass-card bg-surface-container dark:bg-inverse-surface/60 border border-outline-variant/30 dark:border-white/10 rounded-2xl p-lg md:p-xl w-full max-w-2xl text-center shadow-lg" data-aos="fade-up">
+        <div class="w-16 h-16 mx-auto rounded-full bg-primary-container flex items-center justify-center mb-6 text-primary">
+            <span class="material-symbols-outlined text-3xl">mail</span>
+        </div>
+        <h1 class="font-headline-xl text-headline-xl text-on-surface dark:text-inverse-on-surface mb-6">Let's Connect</h1>
+        <p class="font-body-md text-body-md text-on-surface-variant dark:text-secondary-fixed mb-8">
+            I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.
+        </p>
+        <div class="flex flex-col items-center gap-4 w-full">
+            <a href="mailto:vansh5201314@gmail.com" class="magnetic-btn font-label-md text-label-md px-8 py-4 rounded-lg bg-primary text-on-primary hover:opacity-90 transition-opacity font-bold shadow-sm inline-flex items-center justify-center gap-2 text-xl w-full sm:w-auto">
+                <span class="material-symbols-outlined">send</span>
+                vansh5201314@gmail.com
+            </a>
+            <div class="flex flex-col sm:flex-row items-center gap-4 w-full justify-center">
+                <a href="https://github.com/Player1205" target="_blank" rel="noopener noreferrer" class="magnetic-btn font-label-md text-label-md px-8 py-4 rounded-lg border-2 border-outline-variant text-secondary dark:text-secondary-fixed hover:border-outline hover:text-on-surface dark:text-inverse-on-surface transition-colors inline-flex items-center justify-center gap-2 text-lg w-full sm:w-auto">
+                    <span class="material-symbols-outlined">code</span>
+                    GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/vanshrana8165a6323" target="_blank" rel="noopener noreferrer" class="magnetic-btn font-label-md text-label-md px-8 py-4 rounded-lg border-2 border-outline-variant text-secondary dark:text-secondary-fixed hover:border-outline hover:text-on-surface dark:text-inverse-on-surface transition-colors inline-flex items-center justify-center gap-2 text-lg w-full sm:w-auto">
+                    <span class="material-symbols-outlined">work</span>
+                    LinkedIn
+                </a>
+            </div>
+        </div>
+    </div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-xl border-t border-secondary/10 dark:border-secondary-fixed-dim/10 bg-surface dark:bg-inverse-surface flat no shadows">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto gap-8">
+<div class="font-label-md text-label-md font-bold text-on-surface dark:text-inverse-on-surface">
+                © 2026 Vansh Rana. Built with Precision.
+            </div>
+<div class="flex items-center gap-6 font-body-sm text-body-sm">
+<a class="text-secondary dark:text-secondary-fixed hover:text-primary transition-colors" href="https://github.com/Player1205" target="_blank" rel="noopener noreferrer">GitHub</a>
+<a class="text-secondary dark:text-secondary-fixed hover:text-primary transition-colors" href="https://www.linkedin.com/in/vanshrana8165a6323" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+<a class="text-on-surface-variant dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim transition-colors Transition-opacity duration-200" href="https://x.com/thecapman_life" target="_blank" rel="noopener noreferrer">X</a>
+<a class="text-on-surface-variant dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim transition-colors Transition-opacity duration-200" href="contact.html">Email</a>
+</div>
+</div>
+</footer>
+<div class="custom-cursor"></div>
+<div class="custom-cursor-follower"></div>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // Init AOS
+        AOS.init({
+            duration: 800,
+            once: false,
+            mirror: true,
+            offset: 50,
+            easing: 'ease-out-cubic'
+        });
+
+        // Splash Screen
+        const hasSeenSplash = sessionStorage.getItem('hasSeenSplash');
+        const splashScreen = document.getElementById('splash-screen');
+
+        if (!hasSeenSplash) {
+            setTimeout(() => {
+                splashScreen.classList.add('slide-up');
+                document.body.classList.remove('no-scroll');
+                sessionStorage.setItem('hasSeenSplash', 'true');
+                setTimeout(() => splashScreen.remove(), 800);
+            }, 2500);
+        } else {
+            splashScreen.remove();
+            document.body.classList.remove('no-scroll');
+        }
+
+        // Dark Mode Toggle Logic
+        const themeToggleBtn = document.querySelector('.material-symbols-outlined[data-icon="dark_mode"]')?.parentElement;
+        const themeIcon = themeToggleBtn?.querySelector('.material-symbols-outlined');
+        const htmlEl = document.documentElement;
+
+        if (localStorage.getItem('theme') === 'dark') {
+            htmlEl.classList.add('dark');
+            if(themeIcon) themeIcon.textContent = 'light_mode';
+        } else {
+            htmlEl.classList.remove('dark');
+            if(themeIcon) themeIcon.textContent = 'dark_mode';
+        }
+
+        if(themeToggleBtn) {
+            themeToggleBtn.addEventListener('click', () => {
+                htmlEl.classList.toggle('dark');
+                if (htmlEl.classList.contains('dark')) {
+                    localStorage.setItem('theme', 'dark');
+                    themeIcon.textContent = 'light_mode';
+                } else {
+                    localStorage.setItem('theme', 'light');
+                    themeIcon.textContent = 'dark_mode';
+                }
+            });
+        }
+
+        // Custom Cursor
+        const cursor = document.querySelector('.custom-cursor');
+        const follower = document.querySelector('.custom-cursor-follower');
+        let mouseX = 0, mouseY = 0;
+        let followerX = 0, followerY = 0;
+
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            cursor.style.left = mouseX + 'px';
+            cursor.style.top = mouseY + 'px';
+        });
+
+        const animateFollower = () => {
+            followerX += (mouseX - followerX) * 0.15;
+            followerY += (mouseY - followerY) * 0.15;
+            follower.style.left = followerX + 'px';
+            follower.style.top = followerY + 'px';
+            requestAnimationFrame(animateFollower);
+        };
+        animateFollower();
+
+        // Hover effect for interactive elements
+        const interactiveElements = document.querySelectorAll('a, button, .magnetic-btn');
+        interactiveElements.forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                cursor.classList.add('hovering');
+                follower.classList.add('hovering');
+            });
+            el.addEventListener('mouseleave', () => {
+                cursor.classList.remove('hovering');
+                follower.classList.remove('hovering');
+                el.style.transform = '';
+            });
+
+            // Magnetic Button Effect
+            if(el.classList.contains('magnetic-btn')) {
+                el.addEventListener('mousemove', (e) => {
+                    const rect = el.getBoundingClientRect();
+                    const x = e.clientX - rect.left - rect.width / 2;
+                    const y = e.clientY - rect.top - rect.height / 2;
+                    el.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
+                });
+            }
+        });
+    });
+</script>
+</body></html>
