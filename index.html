@@ -264,15 +264,15 @@
 <body class="bg-background text-on-background dark:bg-inverse-surface dark:text-inverse-on-surface font-body-md antialiased overflow-x-hidden no-scroll transition-colors duration-500">
 <!-- Splash Screen -->
 <div id="splash-screen">
-<h1 class="font-cursive italic text-5xl md:text-7xl text-splash-text splash-text-anim text-center px-4">
+<h1 class="font-cursive italic text-4xl sm:text-5xl md:text-7xl text-splash-text splash-text-anim text-center px-4 max-w-[90vw] mx-auto flex flex-col items-center justify-center">
         Welcome To The Rana Portfolio
     </h1>
 </div>
 <!-- TopNavBar -->
 <nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-inverse-surface/80 backdrop-blur-xl bg-surface-container-low dark:bg-[#201311]/50 dark:bg-inverse-surface/50 flat no shadows">
-<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-7xl mx-auto">
+<div class="flex justify-between items-center w-full px-4 md:px-margin-desktop py-4 max-w-7xl mx-auto">
 <!-- Brand -->
-<div class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-on-surface dark:text-inverse-on-surface">
+<div class="font-headline-lg-mobile text-[22px] sm:text-headline-lg-mobile font-bold text-on-surface dark:text-inverse-on-surface shrink-0">
                 Vansh Rana
             </div>
 <!-- Links (Hidden on mobile, flex on md) -->
@@ -284,8 +284,8 @@
 <a class="text-secondary dark:text-secondary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim pb-1 hover:text-on-surface dark:text-inverse-on-surface dark:hover:text-on-secondary-fixed hover:bg-primary-container/20 dark:hover:bg-primary-fixed-dim/10 transition-all duration-300 px-3 py-2 rounded-lg" href="contact.html">Contact</a>
 </div>
 <!-- Trailing Actions -->
-<div class="flex items-center gap-md">
-<a href="assets/resume/Vansh_Rana_Resume.pdf" target="_blank" class="font-label-md text-label-md px-4 py-2 rounded-lg bg-on-surface text-surface dark:bg-primary-fixed-dim dark:text-on-primary-fixed hover:opacity-90 transition-opacity inline-block">Resume</a>
+<div class="flex items-center gap-2 sm:gap-md shrink-0">
+<a href="assets/resume/Vansh_Rana_Resume.pdf" target="_blank" class="hidden sm:inline-block font-label-md text-label-md px-4 py-2 rounded-lg bg-on-surface text-surface dark:bg-primary-fixed-dim dark:text-on-primary-fixed hover:opacity-90 transition-opacity">Resume</a>
 <button class="p-2 rounded-full text-secondary dark:text-secondary-fixed hover:bg-surface-container-highest dark:bg-[#3d2520] transition-colors flex items-center justify-center">
 <span class="material-symbols-outlined" data-icon="dark_mode">dark_mode</span>
 </button>
@@ -563,27 +563,27 @@
     });
 </script>
 <!-- Mobile Bottom Nav -->
-<nav id="mobile-bottom-nav" class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-surface/95 dark:bg-inverse-surface/95 backdrop-blur-xl border-t border-outline-variant/30 dark:border-white/10">
-    <div class="flex items-center justify-around py-2 px-2 max-w-lg mx-auto">
+<nav id="mobile-bottom-nav" class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-surface/95 dark:bg-inverse-surface/95 backdrop-blur-xl border-t border-outline-variant/30 dark:border-white/10" style="padding-bottom: env(safe-area-inset-bottom);">
+    <div class="flex items-center justify-between py-2 px-3 sm:px-6 max-w-lg mx-auto">
         <a href="index.html" class="flex flex-col items-center gap-0.5 min-w-0 px-1 py-1.5 rounded-xl text-primary dark:text-primary-fixed-dim bg-primary-container/20 dark:bg-primary-fixed-dim/10 transition-all duration-200">
             <span class="material-symbols-outlined text-[22px]">home</span>
-            <span class="text-[10px] font-bold tracking-wide">Home</span>
+            <span class="text-[10px] font-bold tracking-wide whitespace-nowrap">Home</span>
         </a>
         <a href="work.html" class="flex flex-col items-center gap-0.5 min-w-0 px-1 py-1.5 rounded-xl text-on-surface-variant dark:text-secondary-fixed hover:text-primary dark:hover:text-primary-fixed-dim transition-all duration-200">
             <span class="material-symbols-outlined text-[22px]">work</span>
-            <span class="text-[10px] font-medium tracking-wide">Work</span>
+            <span class="text-[10px] font-medium tracking-wide whitespace-nowrap">Work</span>
         </a>
         <a href="experience.html" class="flex flex-col items-center gap-0.5 min-w-0 px-1 py-1.5 rounded-xl text-on-surface-variant dark:text-secondary-fixed hover:text-primary dark:hover:text-primary-fixed-dim transition-all duration-200">
             <span class="material-symbols-outlined text-[22px]">timeline</span>
-            <span class="text-[10px] font-medium tracking-wide">Exp</span>
+            <span class="text-[10px] font-medium tracking-wide whitespace-nowrap">Exp</span>
         </a>
         <a href="skills.html" class="flex flex-col items-center gap-0.5 min-w-0 px-1 py-1.5 rounded-xl text-on-surface-variant dark:text-secondary-fixed hover:text-primary dark:hover:text-primary-fixed-dim transition-all duration-200">
             <span class="material-symbols-outlined text-[22px]">code</span>
-            <span class="text-[10px] font-medium tracking-wide">Skills</span>
+            <span class="text-[10px] font-medium tracking-wide whitespace-nowrap">Skills</span>
         </a>
         <a href="contact.html" class="flex flex-col items-center gap-0.5 min-w-0 px-1 py-1.5 rounded-xl text-on-surface-variant dark:text-secondary-fixed hover:text-primary dark:hover:text-primary-fixed-dim transition-all duration-200">
             <span class="material-symbols-outlined text-[22px]">mail</span>
-            <span class="text-[10px] font-medium tracking-wide">Contact</span>
+            <span class="text-[10px] font-medium tracking-wide whitespace-nowrap">Contact</span>
         </a>
     </div>
 </nav>
