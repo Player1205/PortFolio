@@ -244,6 +244,9 @@
 <a class="text-secondary dark:text-secondary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim pb-1 hover:text-on-surface dark:text-inverse-on-surface dark:hover:text-on-secondary-fixed hover:bg-primary-container/20 dark:hover:bg-primary-fixed-dim/10 transition-all duration-300 px-3 py-2 rounded-lg" href="contact.html">Contact</a>
 </div>
 <div class="flex items-center gap-md">
+<button id="mobileMenuBtn" class="md:hidden text-secondary dark:text-secondary-fixed-dim hover:text-on-surface dark:hover:text-inverse-on-surface p-2 rounded-full hover:bg-primary-container/20 dark:hover:bg-primary-fixed-dim/10 transition-all duration-300" aria-label="Open menu">
+<span class="material-symbols-outlined">menu</span>
+</button>
 <button class="text-secondary dark:text-secondary-fixed-dim hover:text-on-surface dark:text-inverse-on-surface dark:hover:text-on-secondary-fixed p-2 rounded-full hover:bg-primary-container/20 dark:hover:bg-primary-fixed-dim/10 transition-all duration-300">
 <span class="material-symbols-outlined" data-icon="dark_mode">dark_mode</span>
 </button>
@@ -251,8 +254,26 @@
 </div>
 </div>
 </nav>
+<!-- Mobile Drawer Overlay -->
+<div id="mobileDrawerBackdrop" class="fixed inset-0 z-[60] bg-black/50 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 md:hidden"></div>
+<!-- Mobile Drawer Panel -->
+<div id="mobileDrawer" class="fixed top-0 right-0 z-[60] h-full w-72 bg-surface dark:bg-inverse-surface shadow-2xl translate-x-full transition-transform duration-300 ease-in-out flex flex-col md:hidden">
+<div class="flex items-center justify-between px-6 py-4 border-b border-outline-variant/30">
+<span class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-on-surface dark:text-inverse-on-surface">Menu</span>
+<button id="mobileMenuClose" class="text-secondary dark:text-secondary-fixed-dim hover:text-on-surface dark:hover:text-inverse-on-surface p-2 rounded-full hover:bg-primary-container/20 dark:hover:bg-primary-fixed-dim/10 transition-all duration-300" aria-label="Close menu">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<nav class="flex flex-col gap-sm px-4 py-6">
+<a class="text-secondary dark:text-secondary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim pb-1 hover:text-on-surface dark:hover:text-inverse-on-surface hover:bg-primary-container/20 dark:hover:bg-primary-fixed-dim/10 transition-all duration-300 px-3 py-3 rounded-lg font-label-md text-label-md" href="index.html">Home</a>
+<a class="text-primary dark:text-primary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim pb-1 hover:bg-primary-container/20 dark:hover:bg-primary-fixed-dim/10 transition-all duration-300 px-3 py-3 rounded-lg font-label-md text-label-md" href="work.html">Work</a>
+<a class="text-secondary dark:text-secondary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim pb-1 hover:text-on-surface dark:hover:text-inverse-on-surface hover:bg-primary-container/20 dark:hover:bg-primary-fixed-dim/10 transition-all duration-300 px-3 py-3 rounded-lg font-label-md text-label-md" href="experience.html">Experience</a>
+<a class="text-secondary dark:text-secondary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim pb-1 hover:text-on-surface dark:hover:text-inverse-on-surface hover:bg-primary-container/20 dark:hover:bg-primary-fixed-dim/10 transition-all duration-300 px-3 py-3 rounded-lg font-label-md text-label-md" href="skills.html">Skills</a>
+<a class="text-secondary dark:text-secondary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim pb-1 hover:text-on-surface dark:hover:text-inverse-on-surface hover:bg-primary-container/20 dark:hover:bg-primary-fixed-dim/10 transition-all duration-300 px-3 py-3 rounded-lg font-label-md text-label-md" href="contact.html">Contact</a>
+</nav>
+</div>
 <!-- Main Content Canvas -->
-<main class="flex-grow pt-[104px] pb-xl px-margin-mobile md:px-margin-desktop w-full max-w-7xl mx-auto flex flex-col gap-xl">
+<main class="flex-grow pt-[104px] pb-24 md:pb-xl px-margin-mobile md:px-margin-desktop w-full max-w-7xl mx-auto flex flex-col gap-xl">
 <!-- Header -->
 <header class="flex flex-col gap-base" data-aos="fade-up">
 <h1 class="font-headline-xl text-headline-xl text-on-surface dark:text-inverse-on-surface">Selected Work</h1>
@@ -263,7 +284,7 @@
 <!-- Projects Grid -->
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
 <!-- Project 1: ML-IPL RosterOptimiser -->
-<article class="tilt-card bg-surface-container-low dark:bg-[#201311]est dark:bg-[#1a0f0d] rounded-xl overflow-hidden border border-outline-variant/50 shadow-md flex flex-col h-full cursor-pointer hover:border-primary/50 transition-all" data-aos="fade-up" data-aos-delay="100" onclick="window.open('https://github.com/Player1205/ML-RosterOptimiser', '_blank')">
+<article class="tilt-card bg-surface-container-low dark:bg-[#201311]est dark:bg-[#1a0f0d] rounded-xl overflow-hidden border border-outline-variant/50 shadow-md flex flex-col h-full hover:border-primary/50 transition-all" data-aos="fade-up" data-aos-delay="100">
 <div class="h-48 bg-surface-container-highest dark:bg-[#3d2520] relative overflow-hidden group">
 <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent"></div>
 <img alt="Data visualization" class="w-full h-full object-cover opacity-80 mix-blend-multiply transition-transform duration-500 group-hover:scale-105" data-alt="A highly detailed and minimalist data visualization dashboard displayed on a modern curved monitor. The screen shows complex futuristic line graphs and scatter plots glowing in subtle, warm peach and cream tones. The setting is a clean, modern high-end developer workspace illuminated by bright, soft white light. The overall aesthetic is clean, technical, yet approachable, perfectly embodying a sophisticated light-mode UI style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-uP8_8GUsLAN9HDy6rxgEtFZOSqwZOi1_d5Jj18LDM1qN8mA5BxR_7e11lC2ZRDMEGcNj0G5Eneh_EIS8y2DDfVc5Qsia1eUQDnC8i5Wk7L4YmJYURPjw8cYIc_1NdgNLFDEcZ-BgqtB37fdbegO4l0ZS42aJGfWlKsSLyPqvx6xhK-NKRRoagJtQvJbEJR9RP-5mG7msOuH5Oy4AcjNiNIEpX66kasLSLR6b2D6MUCoi4F8X3A87cAE3Bx8wMnHBs2mK9Cwn5Gk"/>
@@ -274,9 +295,14 @@
 <div class="p-lg flex flex-col flex-grow gap-md bg-surface dark:bg-inverse-surface">
 <div class="flex items-start justify-between gap-sm">
 <h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface dark:text-inverse-on-surface">ML-IPL RosterOptimiser</h2>
-<a aria-label="View Project" class="text-secondary dark:text-secondary-fixed hover:text-primary transition-colors p-1" href="https://github.com/Player1205/ML-RosterOptimiser" target="_blank" rel="noopener noreferrer">
-<span class="material-symbols-outlined">arrow_outward</span>
+<div class="flex items-center gap-1 shrink-0">
+<a aria-label="GitHub" class="text-secondary dark:text-secondary-fixed hover:text-primary transition-colors p-1.5 rounded-lg hover:bg-primary-container/20" href="https://github.com/Player1205/ML-RosterOptimiser" target="_blank" rel="noopener noreferrer" title="GitHub">
+<span class="material-symbols-outlined text-[20px]">code</span>
 </a>
+<a aria-label="Deployed Site" class="text-secondary dark:text-secondary-fixed hover:text-primary transition-colors p-1.5 rounded-lg hover:bg-primary-container/20" href="https://datapassport-frontend.netlify.app/" target="_blank" rel="noopener noreferrer" title="Live Demo">
+<span class="material-symbols-outlined text-[20px]">rocket_launch</span>
+</a>
+</div>
 </div>
 <p class="font-label-md text-label-md text-on-surface-variant dark:text-secondary-fixed uppercase tracking-wider mb-xs">Team: Apex Zero</p>
 <p class="font-body-sm text-body-sm text-on-surface-variant dark:text-secondary-fixed flex-grow">
@@ -290,7 +316,7 @@
 </div>
 </article>
 <!-- Project 2: CampusCoin -->
-<article class="tilt-card bg-surface-container-low dark:bg-[#201311]est dark:bg-[#1a0f0d] rounded-xl overflow-hidden border border-outline-variant/50 shadow-md flex flex-col h-full cursor-pointer hover:border-primary/50 transition-all" data-aos="fade-up" data-aos-delay="200" onclick="window.open('https://github.com/Player1205/CampusCoin', '_blank')">
+<article class="tilt-card bg-surface-container-low dark:bg-[#201311]est dark:bg-[#1a0f0d] rounded-xl overflow-hidden border border-outline-variant/50 shadow-md flex flex-col h-full hover:border-primary/50 transition-all" data-aos="fade-up" data-aos-delay="200">
 <div class="h-48 bg-surface-container-highest dark:bg-[#3d2520] relative overflow-hidden group">
 <div class="absolute inset-0 bg-gradient-to-tr from-secondary/10 to-transparent"></div>
 <img alt="Decentralized network" class="w-full h-full object-cover opacity-80 mix-blend-multiply transition-transform duration-500 group-hover:scale-105" data-alt="An abstract representation of a decentralized digital network featuring floating, glowing glassmorphic orbs connected by delicate, warm-toned energetic threads. The background is a very light, airy off-white (#FFF5F0) suggesting an expansive, modern, clean environment. The lighting is bright and even, casting soft, diffused shadows that emphasize depth and a premium, minimalist high-tech aesthetic suitable for a modern web application portfolio." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnYLaCKXxu049I6mNJktHArWmSAnKBzHeSyoy1M0OLAftPkRiHAY8h9-iv0zYEspBenO3SvZUNW6Kd98TjcnTo7jQKeeFqw4Wq_PFn4-5KMiGkUvl-cgHPJwfJeNxQocUZNleqTxefI5Rn_JNc8G6e_65XQ19q5a_0kNy1cdKj3uNbVOIeV-S8qrE8_LmuIOTQYAraOCQ2bEBYAIgzHETTW7AM35MXWC1XT1hTlM1xR2TE1nfcrT3oSkaTGLC2WmYUYjpn9M91d4M"/>
@@ -301,9 +327,14 @@
 <div class="p-lg flex flex-col flex-grow gap-md bg-surface dark:bg-inverse-surface">
 <div class="flex items-start justify-between gap-sm">
 <h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface dark:text-inverse-on-surface">CampusCoin</h2>
-<a aria-label="View Project" class="text-secondary dark:text-secondary-fixed hover:text-primary transition-colors p-1" href="https://github.com/Player1205/CampusCoin" target="_blank" rel="noopener noreferrer">
-<span class="material-symbols-outlined">arrow_outward</span>
+<div class="flex items-center gap-1 shrink-0">
+<a aria-label="GitHub" class="text-secondary dark:text-secondary-fixed hover:text-primary transition-colors p-1.5 rounded-lg hover:bg-primary-container/20" href="https://github.com/Player1205/CampusCoin" target="_blank" rel="noopener noreferrer" title="GitHub">
+<span class="material-symbols-outlined text-[20px]">code</span>
 </a>
+<button aria-label="Deployed Site" class="not-deployed-btn text-secondary dark:text-secondary-fixed hover:text-primary transition-colors p-1.5 rounded-lg hover:bg-primary-container/20" title="Live Demo">
+<span class="material-symbols-outlined text-[20px]">rocket_launch</span>
+</button>
+</div>
 </div>
 <p class="font-body-sm text-body-sm text-on-surface-variant dark:text-secondary-fixed flex-grow">
                         A decentralized Progressive Web App (PWA) marketplace designed specifically for campus ecosystems, enabling secure peer-to-peer transactions.
@@ -316,7 +347,7 @@
 </div>
 </article>
 <!-- Project 3: DataPassport -->
-<article class="tilt-card bg-surface-container-low dark:bg-[#201311]est dark:bg-[#1a0f0d] rounded-xl overflow-hidden border border-outline-variant/50 shadow-md flex flex-col h-full cursor-pointer hover:border-primary/50 transition-all" data-aos="fade-up" data-aos-delay="300" onclick="window.open('https://github.com/Player1205/DataPassport', '_blank')">
+<article class="tilt-card bg-surface-container-low dark:bg-[#201311]est dark:bg-[#1a0f0d] rounded-xl overflow-hidden border border-outline-variant/50 shadow-md flex flex-col h-full hover:border-primary/50 transition-all" data-aos="fade-up" data-aos-delay="300">
 <div class="h-48 bg-surface-container-highest dark:bg-[#3d2520] relative overflow-hidden group">
 <div class="absolute inset-0 bg-gradient-to-t from-outline/10 to-transparent"></div>
 <img alt="Data security" class="w-full h-full object-cover opacity-80 mix-blend-multiply transition-transform duration-500 group-hover:scale-105" data-alt="A conceptual 3D render of a secure, transparent digital ledger taking the form of layered, frosted glass plates embedded with subtle glowing warm peach data nodes. The plates hover slightly above a pristine, smooth off-white surface, casting soft ambient shadows indicative of a light-mode glassmorphism style. The composition is highly structured, technical, and minimalist, conveying themes of Web3 integrity, security, and high-end modern developer aesthetics." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCHzO1IcqJYuX7RFnuCfk9VWTiaxpg0QvqFODaX1YB0Ji-jBppYYhFOeMlS1Vd3mGiC6mIt02XqEDr5gjNK_DO-E0bb2mZRGj0G6fCfoDWp9Rkny60CFaKnQpQzOBWlYJe3TeWh1rRCdG7Ayus8mMyrkOnhqLkP0gVvjaLoZnmJnz0B6Veu-6x7RNH1M9ezK9onmTvX1YPdJ54YyVown6Ib8Z39ZJvBFRTnOiI8ax2g0gXGSgmmQETd6bejBuL0VuoEMw3kHlt9I0"/>
@@ -327,9 +358,14 @@
 <div class="p-lg flex flex-col flex-grow gap-md bg-surface dark:bg-inverse-surface">
 <div class="flex items-start justify-between gap-sm">
 <h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface dark:text-inverse-on-surface">DataPassport</h2>
-<a aria-label="View Project" class="text-secondary dark:text-secondary-fixed hover:text-primary transition-colors p-1" href="https://github.com/Player1205/DataPassport" target="_blank" rel="noopener noreferrer">
-<span class="material-symbols-outlined">arrow_outward</span>
+<div class="flex items-center gap-1 shrink-0">
+<a aria-label="GitHub" class="text-secondary dark:text-secondary-fixed hover:text-primary transition-colors p-1.5 rounded-lg hover:bg-primary-container/20" href="https://github.com/Player1205/DataPassport" target="_blank" rel="noopener noreferrer" title="GitHub">
+<span class="material-symbols-outlined text-[20px]">code</span>
 </a>
+<button aria-label="Deployed Site" class="not-deployed-btn text-secondary dark:text-secondary-fixed hover:text-primary transition-colors p-1.5 rounded-lg hover:bg-primary-container/20" title="Live Demo">
+<span class="material-symbols-outlined text-[20px]">rocket_launch</span>
+</button>
+</div>
 </div>
 <p class="font-body-sm text-body-sm text-on-surface-variant dark:text-secondary-fixed flex-grow">
                         A Web3 Data Integrity &amp; Provenance Ledger ensuring transparent, immutable records for sensitive data transactions across distributed networks.
@@ -443,5 +479,75 @@
             }
         });
     });
+    // Mobile drawer toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenuClose = document.getElementById('mobileMenuClose');
+    const mobileDrawer = document.getElementById('mobileDrawer');
+    const mobileDrawerBackdrop = document.getElementById('mobileDrawerBackdrop');
+
+    function openMobileDrawer() {
+        mobileDrawer.classList.remove('translate-x-full');
+        mobileDrawer.classList.add('translate-x-0');
+        mobileDrawerBackdrop.classList.remove('opacity-0', 'pointer-events-none');
+        mobileDrawerBackdrop.classList.add('opacity-100', 'pointer-events-auto');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeMobileDrawer() {
+        mobileDrawer.classList.add('translate-x-full');
+        mobileDrawer.classList.remove('translate-x-0');
+        mobileDrawerBackdrop.classList.add('opacity-0', 'pointer-events-none');
+        mobileDrawerBackdrop.classList.remove('opacity-100', 'pointer-events-auto');
+        document.body.style.overflow = '';
+    }
+
+    if (mobileMenuBtn) mobileMenuBtn.addEventListener('click', openMobileDrawer);
+    if (mobileMenuClose) mobileMenuClose.addEventListener('click', closeMobileDrawer);
+    if (mobileDrawerBackdrop) mobileDrawerBackdrop.addEventListener('click', closeMobileDrawer);
+    // "Not deployed yet" toast
+        document.querySelectorAll('.not-deployed-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const toast = document.getElementById('deploy-toast');
+                toast.classList.remove('translate-y-full', 'opacity-0');
+                toast.classList.add('translate-y-0', 'opacity-100');
+                setTimeout(() => {
+                    toast.classList.add('translate-y-full', 'opacity-0');
+                    toast.classList.remove('translate-y-0', 'opacity-100');
+                }, 2500);
+            });
+        });
 </script>
+<!-- Toast Popup -->
+<div id="deploy-toast" class="fixed bottom-24 md:bottom-8 left-1/2 -translate-x-1/2 z-[70] translate-y-full opacity-0 transition-all duration-300 ease-out pointer-events-none">
+    <div class="flex items-center gap-2 px-5 py-3 rounded-xl bg-on-surface dark:bg-primary-fixed-dim text-surface dark:text-on-primary-fixed font-label-md text-label-md shadow-xl">
+        <span class="material-symbols-outlined text-[18px]">info</span>
+        Not deployed yet
+    </div>
+</div>
+<!-- Mobile Bottom Nav -->
+<nav id="mobile-bottom-nav" class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-surface/95 dark:bg-inverse-surface/95 backdrop-blur-xl border-t border-outline-variant/30 dark:border-white/10">
+    <div class="flex items-center justify-around py-2 px-2 max-w-lg mx-auto">
+        <a href="index.html" class="flex flex-col items-center gap-0.5 min-w-0 px-1 py-1.5 rounded-xl text-on-surface-variant dark:text-secondary-fixed hover:text-primary dark:hover:text-primary-fixed-dim transition-all duration-200">
+            <span class="material-symbols-outlined text-[22px]">home</span>
+            <span class="text-[10px] font-medium tracking-wide">Home</span>
+        </a>
+        <a href="work.html" class="flex flex-col items-center gap-0.5 min-w-0 px-1 py-1.5 rounded-xl text-primary dark:text-primary-fixed-dim bg-primary-container/20 dark:bg-primary-fixed-dim/10 transition-all duration-200">
+            <span class="material-symbols-outlined text-[22px]">work</span>
+            <span class="text-[10px] font-bold tracking-wide">Work</span>
+        </a>
+        <a href="experience.html" class="flex flex-col items-center gap-0.5 min-w-0 px-1 py-1.5 rounded-xl text-on-surface-variant dark:text-secondary-fixed hover:text-primary dark:hover:text-primary-fixed-dim transition-all duration-200">
+            <span class="material-symbols-outlined text-[22px]">timeline</span>
+            <span class="text-[10px] font-medium tracking-wide">Exp</span>
+        </a>
+        <a href="skills.html" class="flex flex-col items-center gap-0.5 min-w-0 px-1 py-1.5 rounded-xl text-on-surface-variant dark:text-secondary-fixed hover:text-primary dark:hover:text-primary-fixed-dim transition-all duration-200">
+            <span class="material-symbols-outlined text-[22px]">code</span>
+            <span class="text-[10px] font-medium tracking-wide">Skills</span>
+        </a>
+        <a href="contact.html" class="flex flex-col items-center gap-0.5 min-w-0 px-1 py-1.5 rounded-xl text-on-surface-variant dark:text-secondary-fixed hover:text-primary dark:hover:text-primary-fixed-dim transition-all duration-200">
+            <span class="material-symbols-outlined text-[22px]">mail</span>
+            <span class="text-[10px] font-medium tracking-wide">Contact</span>
+        </a>
+    </div>
+</nav>
 </body></html>

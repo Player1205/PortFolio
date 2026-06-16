@@ -231,11 +231,32 @@
 <button class="p-2 text-secondary dark:text-secondary-fixed hover:text-on-surface dark:text-inverse-on-surface transition-colors flex items-center justify-center rounded-full hover:bg-primary-container/20">
 <span class="material-symbols-outlined" data-icon="dark_mode">dark_mode</span>
 </button>
+<button id="mobile-menu-btn" class="md:hidden p-2 text-secondary dark:text-secondary-fixed hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors flex items-center justify-center rounded-full hover:bg-primary-container/20" aria-label="Open menu">
+<span class="material-symbols-outlined">menu</span>
+</button>
 </div>
 </div>
 </nav>
+<!-- Mobile Drawer Overlay -->
+<div id="mobile-drawer-backdrop" class="fixed inset-0 z-[60] bg-black/40 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 md:hidden"></div>
+<!-- Mobile Drawer -->
+<div id="mobile-drawer" class="fixed top-0 right-0 z-[60] h-full w-72 bg-surface dark:bg-inverse-surface shadow-2xl translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col">
+<div class="flex items-center justify-between px-margin-mobile py-4 border-b border-secondary/10 dark:border-secondary-fixed-dim/10">
+<span class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-on-surface dark:text-inverse-on-surface">Menu</span>
+<button id="mobile-drawer-close" class="p-2 text-secondary dark:text-secondary-fixed hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors flex items-center justify-center rounded-full hover:bg-primary-container/20" aria-label="Close menu">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<ul class="flex flex-col gap-sm px-margin-mobile py-lg font-label-md text-label-md flex-grow">
+<li><a class="text-secondary dark:text-secondary-fixed-dim hover:text-on-surface dark:hover:text-inverse-on-surface hover:bg-primary-container/20 dark:hover:bg-primary-fixed-dim/10 transition-all duration-300 px-4 py-3 rounded-lg block" href="index.html">Home</a></li>
+<li><a class="text-secondary dark:text-secondary-fixed-dim hover:text-on-surface dark:hover:text-inverse-on-surface hover:bg-primary-container/20 dark:hover:bg-primary-fixed-dim/10 transition-all duration-300 px-4 py-3 rounded-lg block" href="work.html">Work</a></li>
+<li><a class="text-primary dark:text-primary-fixed-dim bg-primary-container/20 dark:bg-primary-fixed-dim/10 px-4 py-3 rounded-lg block font-bold" href="experience.html">Experience</a></li>
+<li><a class="text-secondary dark:text-secondary-fixed-dim hover:text-on-surface dark:hover:text-inverse-on-surface hover:bg-primary-container/20 dark:hover:bg-primary-fixed-dim/10 transition-all duration-300 px-4 py-3 rounded-lg block" href="skills.html">Skills</a></li>
+<li><a class="text-secondary dark:text-secondary-fixed-dim hover:text-on-surface dark:hover:text-inverse-on-surface hover:bg-primary-container/20 dark:hover:bg-primary-fixed-dim/10 transition-all duration-300 px-4 py-3 rounded-lg block" href="contact.html">Contact</a></li>
+</ul>
+</div>
 <!-- Main Content -->
-<main class="flex-grow pt-32 pb-xl px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto w-full relative z-10">
+<main class="flex-grow pt-32 pb-24 md:pb-xl px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto w-full relative z-10">
 <header class="mb-xl text-center md:text-left">
 <h1 class="font-headline-xl text-headline-xl hidden md:block text-on-surface dark:text-inverse-on-surface mb-base tracking-tight">Experience and Open Source</h1>
 <h1 class="font-headline-lg-mobile text-headline-lg-mobile md:hidden text-on-surface dark:text-inverse-on-surface mb-base tracking-tight">Experience and Open Source</h1>
@@ -251,7 +272,7 @@
 <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary-container border-2 border-primary rounded-full z-10 shadow-[0_0_15px_rgba(255,218,185,0.8)]"></div>
 <div class="w-full pl-16 md:pl-0 md:w-[45%] md:text-left text-left">
 <div class="md:hidden font-label-md text-label-md text-primary uppercase tracking-wider mb-xs">May 2026 - Present</div>
-<div class="bg-surface/80 backdrop-blur-md p-lg rounded-xl shadow-sm border border-secondary/10 hover:shadow-md transition-shadow">
+<div class="bg-surface/80 dark:bg-[#2B1A17]/80 backdrop-blur-md p-lg rounded-xl shadow-sm border border-secondary/10 hover:shadow-md transition-shadow">
 <h3 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface dark:text-inverse-on-surface mb-xs">Full Stack Engineer Intern</h3>
 <p class="font-body-sm text-body-sm text-on-surface-variant dark:text-secondary-fixed mb-md font-bold">ThinkNEXT</p>
 <p class="font-body-sm text-body-sm text-on-surface-variant dark:text-secondary-fixed leading-relaxed">
@@ -268,7 +289,7 @@
 <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-4 h-4 bg-surface dark:bg-inverse-surface border-2 border-secondary rounded-full z-10"></div>
 <div class="w-full pl-16 md:pl-0 md:w-[45%] md:text-right text-left">
 <div class="md:hidden font-label-md text-label-md text-secondary dark:text-secondary-fixed uppercase tracking-wider mb-xs">Status: Completed</div>
-<div class="bg-surface/80 backdrop-blur-md p-lg rounded-xl shadow-sm border border-secondary/10 hover:shadow-md transition-shadow">
+<div class="bg-surface/80 dark:bg-[#2B1A17]/80 backdrop-blur-md p-lg rounded-xl shadow-sm border border-secondary/10 hover:shadow-md transition-shadow">
 <h3 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface dark:text-inverse-on-surface mb-xs">Open Source Contributor</h3>
 <p class="font-body-sm text-body-sm text-on-surface-variant dark:text-secondary-fixed mb-md font-bold">Fastify Ecosystem</p>
 <p class="font-body-sm text-body-sm text-on-surface-variant dark:text-secondary-fixed leading-relaxed mb-md">
@@ -327,6 +348,32 @@
             });
         }
 
+        // Mobile Drawer Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const mobileBackdrop = document.getElementById('mobile-drawer-backdrop');
+        const mobileDrawerClose = document.getElementById('mobile-drawer-close');
+
+        function openDrawer() {
+            mobileDrawer.classList.remove('translate-x-full');
+            mobileDrawer.classList.add('translate-x-0');
+            mobileBackdrop.classList.remove('opacity-0', 'pointer-events-none');
+            mobileBackdrop.classList.add('opacity-100', 'pointer-events-auto');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeDrawer() {
+            mobileDrawer.classList.remove('translate-x-0');
+            mobileDrawer.classList.add('translate-x-full');
+            mobileBackdrop.classList.remove('opacity-100', 'pointer-events-auto');
+            mobileBackdrop.classList.add('opacity-0', 'pointer-events-none');
+            document.body.style.overflow = '';
+        }
+
+        if (mobileMenuBtn) mobileMenuBtn.addEventListener('click', openDrawer);
+        if (mobileDrawerClose) mobileDrawerClose.addEventListener('click', closeDrawer);
+        if (mobileBackdrop) mobileBackdrop.addEventListener('click', closeDrawer);
+
         // Init AOS
         AOS.init({
             duration: 800,
@@ -382,4 +429,29 @@
         });
     });
 </script>
+<!-- Mobile Bottom Nav -->
+<nav id="mobile-bottom-nav" class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-surface/95 dark:bg-inverse-surface/95 backdrop-blur-xl border-t border-outline-variant/30 dark:border-white/10">
+    <div class="flex items-center justify-around py-2 px-2 max-w-lg mx-auto">
+        <a href="index.html" class="flex flex-col items-center gap-0.5 min-w-0 px-1 py-1.5 rounded-xl text-on-surface-variant dark:text-secondary-fixed hover:text-primary dark:hover:text-primary-fixed-dim transition-all duration-200">
+            <span class="material-symbols-outlined text-[22px]">home</span>
+            <span class="text-[10px] font-medium tracking-wide">Home</span>
+        </a>
+        <a href="work.html" class="flex flex-col items-center gap-0.5 min-w-0 px-1 py-1.5 rounded-xl text-on-surface-variant dark:text-secondary-fixed hover:text-primary dark:hover:text-primary-fixed-dim transition-all duration-200">
+            <span class="material-symbols-outlined text-[22px]">work</span>
+            <span class="text-[10px] font-medium tracking-wide">Work</span>
+        </a>
+        <a href="experience.html" class="flex flex-col items-center gap-0.5 min-w-0 px-1 py-1.5 rounded-xl text-primary dark:text-primary-fixed-dim bg-primary-container/20 dark:bg-primary-fixed-dim/10 transition-all duration-200">
+            <span class="material-symbols-outlined text-[22px]">timeline</span>
+            <span class="text-[10px] font-bold tracking-wide">Exp</span>
+        </a>
+        <a href="skills.html" class="flex flex-col items-center gap-0.5 min-w-0 px-1 py-1.5 rounded-xl text-on-surface-variant dark:text-secondary-fixed hover:text-primary dark:hover:text-primary-fixed-dim transition-all duration-200">
+            <span class="material-symbols-outlined text-[22px]">code</span>
+            <span class="text-[10px] font-medium tracking-wide">Skills</span>
+        </a>
+        <a href="contact.html" class="flex flex-col items-center gap-0.5 min-w-0 px-1 py-1.5 rounded-xl text-on-surface-variant dark:text-secondary-fixed hover:text-primary dark:hover:text-primary-fixed-dim transition-all duration-200">
+            <span class="material-symbols-outlined text-[22px]">mail</span>
+            <span class="text-[10px] font-medium tracking-wide">Contact</span>
+        </a>
+    </div>
+</nav>
 </body></html>

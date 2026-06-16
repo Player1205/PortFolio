@@ -289,18 +289,42 @@
 <button class="p-2 rounded-full text-secondary dark:text-secondary-fixed hover:bg-surface-container-highest dark:bg-[#3d2520] transition-colors flex items-center justify-center">
 <span class="material-symbols-outlined" data-icon="dark_mode">dark_mode</span>
 </button>
+<!-- Mobile Hamburger -->
+<button id="mobile-menu-btn" class="md:hidden p-2 rounded-full text-secondary dark:text-secondary-fixed hover:bg-surface-container-highest dark:bg-[#3d2520] transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined">menu</span>
+</button>
 </div>
 </div>
 </nav>
-<main class="w-full max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop pt-32 pb-xl min-h-screen">
+<!-- Mobile Drawer Overlay -->
+<div id="mobile-drawer-backdrop" class="fixed inset-0 bg-black/50 z-[55] hidden opacity-0 transition-opacity duration-300"></div>
+<div id="mobile-drawer" class="fixed top-0 right-0 h-full w-72 z-[60] bg-surface dark:bg-inverse-surface shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col">
+    <div class="flex items-center justify-between px-6 py-5 border-b border-outline-variant/20">
+        <span class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-on-surface dark:text-inverse-on-surface">Menu</span>
+        <button id="mobile-drawer-close" class="p-2 rounded-full text-secondary dark:text-secondary-fixed hover:bg-surface-container-highest dark:bg-[#3d2520] transition-colors">
+            <span class="material-symbols-outlined">close</span>
+        </button>
+    </div>
+    <nav class="flex flex-col gap-2 px-4 py-6">
+        <a class="text-primary dark:text-primary-fixed-dim font-label-md text-label-md px-4 py-3 rounded-lg bg-primary-container/20 dark:bg-primary-fixed-dim/10 transition-all duration-200" href="index.html">Home</a>
+        <a class="text-on-surface dark:text-inverse-on-surface font-label-md text-label-md px-4 py-3 rounded-lg hover:bg-surface-container-highest dark:hover:bg-[#3d2520] transition-all duration-200" href="work.html">Work</a>
+        <a class="text-on-surface dark:text-inverse-on-surface font-label-md text-label-md px-4 py-3 rounded-lg hover:bg-surface-container-highest dark:hover:bg-[#3d2520] transition-all duration-200" href="experience.html">Experience</a>
+        <a class="text-on-surface dark:text-inverse-on-surface font-label-md text-label-md px-4 py-3 rounded-lg hover:bg-surface-container-highest dark:hover:bg-[#3d2520] transition-all duration-200" href="skills.html">Skills</a>
+        <a class="text-on-surface dark:text-inverse-on-surface font-label-md text-label-md px-4 py-3 rounded-lg hover:bg-surface-container-highest dark:hover:bg-[#3d2520] transition-all duration-200" href="contact.html">Contact</a>
+    </nav>
+    <div class="mt-auto px-4 pb-6">
+        <a href="assets/resume/Vansh_Rana_Resume.pdf" target="_blank" class="block text-center font-label-md text-label-md px-4 py-3 rounded-lg bg-on-surface text-surface dark:bg-primary-fixed-dim dark:text-on-primary-fixed hover:opacity-90 transition-opacity">Resume</a>
+    </div>
+</div>
+<main class="w-full max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop pt-32 pb-24 md:pb-xl min-h-screen">
 <!-- Hero Section -->
-<section class="flex flex-col md:flex-row items-center justify-between gap-xl mb-32">
+<section class="flex flex-col md:flex-row items-center justify-between gap-xl mb-16 md:mb-32">
 <div class="flex-1 max-w-2xl">
 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-container/20 text-primary font-label-md text-label-md mb-6" data-aos="fade-up">
 <span class="w-2 h-2 rounded-full bg-primary"></span>
                     Available for new opportunities
                 </div>
-<h1 class="font-headline-xl text-headline-xl text-on-surface dark:text-inverse-on-surface mb-6" data-aos="fade-up" data-aos-delay="100">
+<h1 class="font-headline-xl text-[32px] leading-[40px] md:text-headline-xl text-on-surface dark:text-inverse-on-surface mb-4 md:mb-6" data-aos="fade-up" data-aos-delay="100">
                     Hi, I'm Vansh Rana.<br/>
 <span class="text-primary">Software Engineer.</span>
 </h1>
@@ -320,9 +344,9 @@
 <div class="flex-1 w-full max-w-lg relative" data-aos="zoom-in" data-aos-delay="400">
 <!-- Decorative background blob -->
 <div class="absolute inset-0 bg-primary-container dark:bg-primary-fixed-dim rounded-full blur-3xl opacity-30 transform translate-x-4 translate-y-4 transition-colors duration-500"></div>
-<div class="grid grid-cols-3 grid-rows-2 gap-4 relative h-[400px] md:h-[450px]">
-    <!-- Big image (Trophy) -->
-    <div class="col-span-2 row-span-2 relative rounded-2xl overflow-hidden border border-outline-variant/30 dark:border-white/10 shadow-lg bg-surface-container dark:bg-inverse-surface transition-colors duration-500 group">
+<div class="grid grid-cols-2 grid-rows-2 gap-3 md:grid-cols-3 md:gap-4 relative h-[280px] md:h-[450px]">
+    <!-- Big image (Trophy) - takes 1 col on mobile, 2 cols on desktop -->
+    <div class="col-span-1 row-span-2 md:col-span-2 md:row-span-2 relative rounded-2xl overflow-hidden border border-outline-variant/30 dark:border-white/10 shadow-lg bg-surface-container dark:bg-inverse-surface transition-colors duration-500 group">
         <img alt="Vansh Rana with Trophy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="assets/images/20260228_172935.jpg"/>
     </div>
     <!-- Small image top right -->
@@ -507,6 +531,60 @@
                 });
             }
         });
+        // Mobile Drawer
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const drawer = document.getElementById('mobile-drawer');
+        const backdrop = document.getElementById('mobile-drawer-backdrop');
+        const closeBtn = document.getElementById('mobile-drawer-close');
+
+        function openDrawer() {
+            backdrop.classList.remove('hidden');
+            requestAnimationFrame(() => {
+                backdrop.classList.remove('opacity-0');
+                backdrop.classList.add('opacity-100');
+                drawer.classList.remove('translate-x-full');
+                drawer.classList.add('translate-x-0');
+            });
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeDrawer() {
+            backdrop.classList.remove('opacity-100');
+            backdrop.classList.add('opacity-0');
+            drawer.classList.remove('translate-x-0');
+            drawer.classList.add('translate-x-full');
+            document.body.style.overflow = '';
+            setTimeout(() => backdrop.classList.add('hidden'), 300);
+        }
+
+        if(menuBtn) menuBtn.addEventListener('click', openDrawer);
+        if(closeBtn) closeBtn.addEventListener('click', closeDrawer);
+        if(backdrop) backdrop.addEventListener('click', closeDrawer);
     });
 </script>
+<!-- Mobile Bottom Nav -->
+<nav id="mobile-bottom-nav" class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-surface/95 dark:bg-inverse-surface/95 backdrop-blur-xl border-t border-outline-variant/30 dark:border-white/10">
+    <div class="flex items-center justify-around py-2 px-2 max-w-lg mx-auto">
+        <a href="index.html" class="flex flex-col items-center gap-0.5 min-w-0 px-1 py-1.5 rounded-xl text-primary dark:text-primary-fixed-dim bg-primary-container/20 dark:bg-primary-fixed-dim/10 transition-all duration-200">
+            <span class="material-symbols-outlined text-[22px]">home</span>
+            <span class="text-[10px] font-bold tracking-wide">Home</span>
+        </a>
+        <a href="work.html" class="flex flex-col items-center gap-0.5 min-w-0 px-1 py-1.5 rounded-xl text-on-surface-variant dark:text-secondary-fixed hover:text-primary dark:hover:text-primary-fixed-dim transition-all duration-200">
+            <span class="material-symbols-outlined text-[22px]">work</span>
+            <span class="text-[10px] font-medium tracking-wide">Work</span>
+        </a>
+        <a href="experience.html" class="flex flex-col items-center gap-0.5 min-w-0 px-1 py-1.5 rounded-xl text-on-surface-variant dark:text-secondary-fixed hover:text-primary dark:hover:text-primary-fixed-dim transition-all duration-200">
+            <span class="material-symbols-outlined text-[22px]">timeline</span>
+            <span class="text-[10px] font-medium tracking-wide">Exp</span>
+        </a>
+        <a href="skills.html" class="flex flex-col items-center gap-0.5 min-w-0 px-1 py-1.5 rounded-xl text-on-surface-variant dark:text-secondary-fixed hover:text-primary dark:hover:text-primary-fixed-dim transition-all duration-200">
+            <span class="material-symbols-outlined text-[22px]">code</span>
+            <span class="text-[10px] font-medium tracking-wide">Skills</span>
+        </a>
+        <a href="contact.html" class="flex flex-col items-center gap-0.5 min-w-0 px-1 py-1.5 rounded-xl text-on-surface-variant dark:text-secondary-fixed hover:text-primary dark:hover:text-primary-fixed-dim transition-all duration-200">
+            <span class="material-symbols-outlined text-[22px]">mail</span>
+            <span class="text-[10px] font-medium tracking-wide">Contact</span>
+        </a>
+    </div>
+</nav>
 </body></html>

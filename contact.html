@@ -289,10 +289,42 @@
 <button class="p-2 rounded-full text-secondary dark:text-secondary-fixed hover:bg-surface-container-highest dark:bg-[#3d2520] transition-colors flex items-center justify-center">
 <span class="material-symbols-outlined" data-icon="dark_mode">dark_mode</span>
 </button>
+<!-- Hamburger button (mobile only) -->
+<button id="mobile-menu-btn" class="md:hidden p-2 rounded-full text-secondary dark:text-secondary-fixed hover:bg-surface-container-highest dark:hover:bg-[#3d2520] transition-colors flex items-center justify-center" aria-label="Open menu">
+<span class="material-symbols-outlined">menu</span>
+</button>
 </div>
 </div>
 </nav>
-<main class="w-full max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop pt-32 pb-xl min-h-[70vh] flex flex-col items-center justify-center">
+<!-- Mobile Drawer Backdrop -->
+<div id="mobile-drawer-backdrop" class="fixed inset-0 z-[60] bg-black/40 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 md:hidden"></div>
+<!-- Mobile Drawer -->
+<aside id="mobile-drawer" class="fixed top-0 right-0 z-[60] h-full w-72 bg-surface dark:bg-inverse-surface shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col">
+  <div class="flex items-center justify-between px-6 py-5 border-b border-outline-variant/30 dark:border-white/10">
+    <span class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-on-surface dark:text-inverse-on-surface">Menu</span>
+    <button id="mobile-drawer-close" class="p-2 rounded-full text-secondary dark:text-secondary-fixed hover:bg-surface-container-highest dark:hover:bg-[#3d2520] transition-colors flex items-center justify-center" aria-label="Close menu">
+      <span class="material-symbols-outlined">close</span>
+    </button>
+  </div>
+  <nav class="flex flex-col gap-2 px-4 py-6 flex-1 overflow-y-auto">
+    <a class="font-label-md text-label-md text-secondary dark:text-secondary-fixed-dim hover:text-on-surface dark:hover:text-on-secondary-fixed hover:bg-primary-container/20 dark:hover:bg-primary-fixed-dim/10 transition-all duration-300 px-4 py-3 rounded-lg flex items-center gap-3" href="index.html">
+      <span class="material-symbols-outlined text-[20px]">home</span> Home
+    </a>
+    <a class="font-label-md text-label-md text-secondary dark:text-secondary-fixed-dim hover:text-on-surface dark:hover:text-on-secondary-fixed hover:bg-primary-container/20 dark:hover:bg-primary-fixed-dim/10 transition-all duration-300 px-4 py-3 rounded-lg flex items-center gap-3" href="work.html">
+      <span class="material-symbols-outlined text-[20px]">work</span> Work
+    </a>
+    <a class="font-label-md text-label-md text-secondary dark:text-secondary-fixed-dim hover:text-on-surface dark:hover:text-on-secondary-fixed hover:bg-primary-container/20 dark:hover:bg-primary-fixed-dim/10 transition-all duration-300 px-4 py-3 rounded-lg flex items-center gap-3" href="experience.html">
+      <span class="material-symbols-outlined text-[20px]">timeline</span> Experience
+    </a>
+    <a class="font-label-md text-label-md text-secondary dark:text-secondary-fixed-dim hover:text-on-surface dark:hover:text-on-secondary-fixed hover:bg-primary-container/20 dark:hover:bg-primary-fixed-dim/10 transition-all duration-300 px-4 py-3 rounded-lg flex items-center gap-3" href="skills.html">
+      <span class="material-symbols-outlined text-[20px]">code</span> Skills
+    </a>
+    <a class="font-label-md text-label-md text-primary dark:text-primary-fixed-dim font-bold hover:bg-primary-container/20 dark:hover:bg-primary-fixed-dim/10 transition-all duration-300 px-4 py-3 rounded-lg flex items-center gap-3 bg-primary-container/10 dark:bg-primary-fixed-dim/5" href="contact.html">
+      <span class="material-symbols-outlined text-[20px]">mail</span> Contact
+    </a>
+  </nav>
+</aside>
+<main class="w-full max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop pt-32 pb-24 md:pb-xl min-h-[70vh] flex flex-col items-center justify-center">
     <div class="glass-card bg-surface-container dark:bg-inverse-surface/60 border border-outline-variant/30 dark:border-white/10 rounded-2xl p-lg md:p-xl w-full max-w-2xl text-center shadow-lg" data-aos="fade-up">
         <div class="w-16 h-16 mx-auto rounded-full bg-primary-container flex items-center justify-center mb-6 text-primary">
             <span class="material-symbols-outlined text-3xl">mail</span>
@@ -435,6 +467,56 @@
                 });
             }
         });
+        // Mobile Drawer Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const mobileBackdrop = document.getElementById('mobile-drawer-backdrop');
+        const mobileDrawerClose = document.getElementById('mobile-drawer-close');
+
+        function openDrawer() {
+            mobileDrawer.classList.remove('translate-x-full');
+            mobileDrawer.classList.add('translate-x-0');
+            mobileBackdrop.classList.remove('opacity-0', 'pointer-events-none');
+            mobileBackdrop.classList.add('opacity-100', 'pointer-events-auto');
+            document.body.classList.add('no-scroll');
+        }
+
+        function closeDrawer() {
+            mobileDrawer.classList.add('translate-x-full');
+            mobileDrawer.classList.remove('translate-x-0');
+            mobileBackdrop.classList.add('opacity-0', 'pointer-events-none');
+            mobileBackdrop.classList.remove('opacity-100', 'pointer-events-auto');
+            document.body.classList.remove('no-scroll');
+        }
+
+        if (mobileMenuBtn) mobileMenuBtn.addEventListener('click', openDrawer);
+        if (mobileDrawerClose) mobileDrawerClose.addEventListener('click', closeDrawer);
+        if (mobileBackdrop) mobileBackdrop.addEventListener('click', closeDrawer);
     });
 </script>
+<!-- Mobile Bottom Nav -->
+<nav id="mobile-bottom-nav" class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-surface/95 dark:bg-inverse-surface/95 backdrop-blur-xl border-t border-outline-variant/30 dark:border-white/10">
+    <div class="flex items-center justify-around py-2 px-2 max-w-lg mx-auto">
+        <a href="index.html" class="flex flex-col items-center gap-0.5 min-w-0 px-1 py-1.5 rounded-xl text-on-surface-variant dark:text-secondary-fixed hover:text-primary dark:hover:text-primary-fixed-dim transition-all duration-200">
+            <span class="material-symbols-outlined text-[22px]">home</span>
+            <span class="text-[10px] font-medium tracking-wide">Home</span>
+        </a>
+        <a href="work.html" class="flex flex-col items-center gap-0.5 min-w-0 px-1 py-1.5 rounded-xl text-on-surface-variant dark:text-secondary-fixed hover:text-primary dark:hover:text-primary-fixed-dim transition-all duration-200">
+            <span class="material-symbols-outlined text-[22px]">work</span>
+            <span class="text-[10px] font-medium tracking-wide">Work</span>
+        </a>
+        <a href="experience.html" class="flex flex-col items-center gap-0.5 min-w-0 px-1 py-1.5 rounded-xl text-on-surface-variant dark:text-secondary-fixed hover:text-primary dark:hover:text-primary-fixed-dim transition-all duration-200">
+            <span class="material-symbols-outlined text-[22px]">timeline</span>
+            <span class="text-[10px] font-medium tracking-wide">Exp</span>
+        </a>
+        <a href="skills.html" class="flex flex-col items-center gap-0.5 min-w-0 px-1 py-1.5 rounded-xl text-on-surface-variant dark:text-secondary-fixed hover:text-primary dark:hover:text-primary-fixed-dim transition-all duration-200">
+            <span class="material-symbols-outlined text-[22px]">code</span>
+            <span class="text-[10px] font-medium tracking-wide">Skills</span>
+        </a>
+        <a href="contact.html" class="flex flex-col items-center gap-0.5 min-w-0 px-1 py-1.5 rounded-xl text-primary dark:text-primary-fixed-dim bg-primary-container/20 dark:bg-primary-fixed-dim/10 transition-all duration-200">
+            <span class="material-symbols-outlined text-[22px]">mail</span>
+            <span class="text-[10px] font-bold tracking-wide">Contact</span>
+        </a>
+    </div>
+</nav>
 </body></html>
