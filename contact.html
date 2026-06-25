@@ -260,8 +260,12 @@
             overflow: hidden;
         }
     </style>
+    <style>
+        body { overflow-x: hidden !important; }
+    </style>
 </head>
 <body class="bg-background text-on-surface dark:text-inverse-on-surface font-body-md antialiased overflow-x-hidden min-h-screen flex flex-col no-scroll transition-colors duration-500">
+<div class="overflow-x-hidden w-full relative">
 <!-- Splash Screen -->
 <div id="splash-screen">
 <h1 class="font-cursive italic text-headline-xl md:text-7xl text-splash-text splash-text-anim text-center px-4 max-w-[90vw] mx-auto flex flex-col items-center justify-center">
@@ -519,4 +523,4 @@
         </a>
     </div>
 </nav>
-</body></html>
+</div></body></html>

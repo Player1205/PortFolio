@@ -228,8 +228,12 @@
     },
   }
 </script>
+    <style>
+        body { overflow-x: hidden !important; }
+    </style>
 </head>
-<body class="bg-background text-on-surface dark:text-inverse-on-surface min-h-screen flex flex-col font-body-md selection:bg-primary-container selection:text-on-primary-container dark:bg-inverse-surface dark:text-inverse-on-surface transition-colors duration-500">
+<body class="bg-background text-on-surface dark:text-inverse-on-surface min-h-screen flex flex-col font-body-md overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container dark:bg-inverse-surface dark:text-inverse-on-surface transition-colors duration-500">
+<div class="overflow-x-hidden w-full relative">
 <!-- TopNavBar -->
 <nav class="bg-surface/80 dark:bg-inverse-surface/80 backdrop-blur-xl fixed top-0 w-full z-50 bg-surface-container-low dark:bg-[#201311]/50 dark:bg-inverse-surface/50">
 <div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-7xl mx-auto">
@@ -550,4 +554,4 @@
         </a>
     </div>
 </nav>
-</body></html>
+</div></body></html>
