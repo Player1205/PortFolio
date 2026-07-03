@@ -109,7 +109,7 @@ export function SplashScreen() {
       id="splash-screen"
       className={`fixed inset-0 bg-splash-bg z-[9999] flex justify-center items-center transition-transform duration-[800ms] ease-[cubic-bezier(0.77,0,0.175,1)] ${slideUp ? "-translate-y-full" : ""}`}
     >
-      <h1 className="font-cursive italic text-headline-xl md:text-7xl text-splash-text splash-text-anim text-center px-4 max-w-[90vw] mx-auto flex flex-col items-center justify-center opacity-0 translate-y-5 animate-[splashFadeIn_1s_ease_forwards_0.5s]">
+      <h1 className="font-cursive italic text-headline-xl md:text-7xl text-[#D4AF37] splash-text-anim text-center px-4 max-w-[90vw] mx-auto flex flex-col items-center justify-center opacity-0 translate-y-5 animate-[splashFadeIn_1s_ease_forwards_0.5s]">
         Welcome To The Rana Portfolio
       </h1>
       <style dangerouslySetInnerHTML={{ __html: `
