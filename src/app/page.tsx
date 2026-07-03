@@ -1,4 +1,4 @@
-//Myresume
+//My resume
 
 import Link from 'next/link';
 
