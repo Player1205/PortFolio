@@ -33,15 +33,15 @@ export default function Home() {
           <div className="grid grid-cols-2 grid-rows-2 gap-3 md:grid-cols-3 md:gap-4 relative h-[280px] md:h-[450px]">
             {/* Big image (Trophy) - takes 1 col on mobile, 2 cols on desktop */}
             <div className="col-span-1 row-span-2 md:col-span-2 md:row-span-2 relative rounded-2xl overflow-hidden border border-outline-variant/30 dark:border-white/10 shadow-lg bg-surface-container dark:bg-inverse-surface transition-colors duration-500 group">
-              <img alt="Vansh Rana with Trophy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="/assets/images/20260228_172935.jpg"/>
+              <img alt="Vansh Rana with Trophy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="/PortFolio/assets/images/20260228_172935.jpg"/>
             </div>
             {/* Small image top right */}
             <div className="col-span-1 row-span-1 relative rounded-2xl overflow-hidden border border-outline-variant/30 dark:border-white/10 shadow-lg bg-surface-container dark:bg-inverse-surface transition-colors duration-500 group">
-              <img alt="Vansh Rana Portrait" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="/assets/images/IMG_0426.jpg"/>
+              <img alt="Vansh Rana Portrait" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="/PortFolio/assets/images/IMG_0426.jpg"/>
             </div>
             {/* Small image bottom right */}
             <div className="col-span-1 row-span-1 relative rounded-2xl overflow-hidden border border-outline-variant/30 dark:border-white/10 shadow-lg bg-surface-container dark:bg-inverse-surface transition-colors duration-500 group">
-              <img alt="Vansh Rana" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="/assets/images/20260228_143639.jpg"/>
+              <img alt="Vansh Rana" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="/PortFolio/assets/images/20260228_143639.jpg"/>
             </div>
           </div>
         </div>
