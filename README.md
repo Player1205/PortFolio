@@ -1,36 +1,154 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<p align="center">
+  <img src="./public/assets/images/readme_banner.png" alt="Vansh Rana Banner" width="100%" style="border-radius: 12px; margin-bottom: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);" />
+</p>
 
-## Getting Started
+<h1 align="center">⚡ Vansh Rana ⚡</h1>
+<p align="center">
+  <strong>Software Engineer & System Architect</strong><br>
+  Bridging the gap between robust backend logic and elegant frontend experiences.
+</p>
 
-First, run the development server:
+<p align="center">
+  <a href="https://github.com/Player1205"><img src="https://img.shields.io/github/followers/Player1205?label=Follow&style=for-the-badge&logo=github&color=FFB28F&logoColor=white" alt="GitHub Followers" /></a>
+  <a href="https://www.linkedin.com/in/vanshrana8165a6323"><img src="https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Connect" /></a>
+  <a href="mailto:vansh5201314@gmail.com"><img src="https://img.shields.io/badge/Email-Contact-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email Contact" /></a>
+</p>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## 🪐 Design Philosophy & Architecture
+
+> *"My approach to software engineering roots in minimalism and efficiency. I design architectures that are as scalable as they are maintainable, prioritizing clear data flow and modular components. Precision is the anchor."*
+
+```json
+{
+  "developer": "Vansh Rana",
+  "focus": ["Full-Stack", "System Design", "Software Engineering", "DSA"],
+  "currently_learning": [
+    "Rust",
+    "Web3 Architecture",
+    "Next.js"
+  ]
+}
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Selected Works
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+A showcase of high-end projects blending technical precision with modern, premium aesthetics.
 
-## Learn More
+| Project | Stack | Description | Source Code |
+| :--- | :--- | :--- | :--- |
+| **🤖 ML-IPL RosterOptimiser** | `XGBoost` `Random Forest` `Scikit-Learn` `Python` | An AI-driven IPL Roster Optimizer utilizing advanced ML algorithms to predict player performance and optimize auction strategies. Developed under Team Apex Zero. | [📂 View Repository](https://github.com/Player1205/ML-RosterOptimiser) |
+| **🪙 CampusCoin** | `PWA` `Web3` `React` `Solidity` | A decentralized Progressive Web App (PWA) marketplace designed specifically for campus ecosystems, enabling secure peer-to-peer transactions. | [📂 View Repository](https://github.com/Player1205/CampusCoin) |
+| **🛡️ DataPassport** | `Blockchain` `IPFS` `Cryptography` | A Web3 Data Integrity & Provenance Ledger ensuring transparent, immutable records for sensitive data transactions across distributed networks. | [📂 View Repository](https://github.com/Player1205/DataPassport) <br> [🚀 Live Demo](https://datapassport-frontend.netlify.app/) |
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠️ Technical Proficiency
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Categorized overview of the languages, frameworks, and developer tools I utilize to craft clean, performant software.
 
-## Deploy on Vercel
+<table>
+  <tr>
+    <td width="33%" valign="top">
+      <h3>💻 Languages & Core</h3>
+      <ul>
+        <li>TypeScript / JavaScript</li>
+        <li>C++</li>
+        <li>Python</li>
+        <li>Java</li>
+        <li>SQL</li>
+        <li>HTML5 / CSS3</li>
+      </ul>
+    </td>
+    <td width="33%" valign="top">
+      <h3>⚛️ Frameworks & Libraries</h3>
+      <ul>
+        <li>Next.js / React.js</li>
+        <li>Node.js / Express.js</li>
+        <li>Tailwind CSS</li>
+        <li>Redux Toolkit</li>
+      </ul>
+    </td>
+    <td width="34%" valign="top">
+      <h3>🗄️ Databases & Dev Tools</h3>
+      <ul>
+        <li>MongoDB / PostgreSQL / MySQL</li>
+        <li>Docker / AWS</li>
+        <li>Git & GitHub</li>
+        <li>Figma (UI/UX)</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 💼 Experience & Open Source
+
+#### 💻 ThinkNEXT — *Full Stack Engineer Intern* `May 2026 - Present`
+* Developing robust full-stack applications focusing on performance and user experience.
+* Collaborating with cross-functional teams to deliver scalable solutions.
+
+#### 🟢 Fastify Ecosystem — *Open Source Contributor*
+* Contributed to developer tooling and validation processes.
+* Maintained **`fastify-param-schema-validation`**, improving parameters validation flow and developer experience.
+
+---
+
+## 📊 GitHub Analytics
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=Player1205&show_icons=true&theme=radical&border_radius=10&hide_border=false" alt="Vansh's GitHub Stats" width="48%" />
+  &nbsp;
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Player1205&layout=compact&theme=radical&border_radius=10&hide_border=false" alt="Vansh's Top Languages" width="48%" />
+</p>
+
+---
+
+## 🛠️ Getting Started with the Portfolio
+
+To run the Next.js portfolio website locally, follow these steps:
+
+### 1. Prerequisites
+Make sure you have [Node.js](https://nodejs.org) installed on your local environment (Node 18+ is recommended).
+
+### 2. Clone the Repository
+```bash
+git clone https://github.com/Player1205/PortFolio.git
+cd PortFolio
+```
+
+### 3. Install Dependencies
+```bash
+npm install
+```
+
+### 4. Start Dev Server
+```bash
+npm run dev
+```
+Open [http://localhost:3000](http://localhost:3000) inside your browser to view the application.
+
+### 5. Production Build
+To build and start the optimized production version:
+```bash
+npm run build
+npm run start
+```
+
+---
+
+## 📬 Let's Connect!
+
+I'm always open to discussing new projects, design systems, or engineering opportunities. Feel free to reach out!
+
+* **Email:** [vansh5201314@gmail.com](mailto:vansh5201314@gmail.com)
+* **LinkedIn:** [linkedin.com/in/vanshrana8165a6323](https://www.linkedin.com/in/vanshrana8165a6323)
+* **GitHub:** [@Player1205](https://github.com/Player1205)
+
+<p align="center">
+  Designed with precision. Crafted with care. ✨
+</p>
