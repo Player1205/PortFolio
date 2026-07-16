@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./public/assets/images/readme_banner.png" alt="Vansh Rana Banner" width="100%" style="border-radius: 12px; margin-bottom: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);" />
+  <img src="./public/assets/images/readme_banner.png" alt="Vansh Rana Banner" width="350" style="border-radius: 12px; margin-bottom: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);" />
 </p>
 
 <h1 align="center">⚡ Vansh Rana ⚡</h1>
