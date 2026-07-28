@@ -122,7 +122,7 @@ export function SplashScreen() {
   return (
     <div
       id="splash-screen"
-      className={`fixed inset-0 bg-splash-bg dark:bg-[#120a09] z-[9999] flex flex-col justify-center items-center transition-transform duration-[800ms] ease-[cubic-bezier(0.77,0,0.175,1)] ${slideUp ? "-translate-y-full" : ""}`}
+      className={`fixed inset-0 bg-[#800000] bg-splash-bg z-[9999] flex flex-col justify-center items-center transition-transform duration-[800ms] ease-[cubic-bezier(0.77,0,0.175,1)] ${slideUp ? "-translate-y-full" : ""}`}
     >
       <div className="relative px-6 py-4 text-center flex flex-col items-center max-w-[92vw] mx-auto">
         {/* Glow backdrop */}
