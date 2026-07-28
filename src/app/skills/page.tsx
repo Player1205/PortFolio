@@ -6,7 +6,7 @@ export default function Skills() {
         <p className="font-body-md text-body-md text-on-surface-variant dark:text-secondary-fixed max-w-2xl">A structured overview of the languages, frameworks, and tools I utilize to build scalable, high-performance applications.</p>
       </div>
       {/* Bento Grid for Skills */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {/* Category: Languages & Core */}
         <section className="bg-surface dark:bg-inverse-surface rounded-xl p-6 border border-outline/20 shadow-sm flex flex-col gap-4 hover:-translate-y-1 transition-transform duration-300 group" data-aos="fade-right" data-aos-delay="100">
           <div className="flex items-center gap-2 text-primary border-b border-outline/10 pb-2">
