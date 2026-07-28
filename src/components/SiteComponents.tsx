@@ -81,19 +81,34 @@ export function CustomCursor() {
 export function SplashScreen() {
   const [show, setShow] = useState(true);
   const [slideUp, setSlideUp] = useState(false);
+  const [displayedText, setDisplayedText] = useState("");
+  const fullText = "Welcome to The Rana PortFolio";
 
   useEffect(() => {
     const hasSeenSplash = sessionStorage.getItem("hasSeenSplash");
     if (!hasSeenSplash) {
       document.body.classList.add("no-scroll");
+
+      let index = 0;
+      const typingInterval = setInterval(() => {
+        if (index < fullText.length) {
+          setDisplayedText(fullText.slice(0, index + 1));
+          index++;
+        } else {
+          clearInterval(typingInterval);
+        }
+      }, 55);
+
       const timer1 = setTimeout(() => {
         setSlideUp(true);
         sessionStorage.setItem("hasSeenSplash", "true");
         document.body.classList.remove("no-scroll");
         
         setTimeout(() => setShow(false), 800);
-      }, 2500);
+      }, 3200);
+
       return () => {
+        clearInterval(typingInterval);
         clearTimeout(timer1);
         document.body.classList.remove("no-scroll");
       };
@@ -107,14 +122,26 @@ export function SplashScreen() {
   return (
     <div
       id="splash-screen"
-      className={`fixed inset-0 bg-splash-bg z-[9999] flex justify-center items-center transition-transform duration-[800ms] ease-[cubic-bezier(0.77,0,0.175,1)] ${slideUp ? "-translate-y-full" : ""}`}
+      className={`fixed inset-0 bg-splash-bg dark:bg-[#120a09] z-[9999] flex flex-col justify-center items-center transition-transform duration-[800ms] ease-[cubic-bezier(0.77,0,0.175,1)] ${slideUp ? "-translate-y-full" : ""}`}
     >
-      <h1 className="font-cursive italic text-headline-xl md:text-7xl text-[#D4AF37] splash-text-anim text-center px-4 max-w-[90vw] mx-auto flex flex-col items-center justify-center opacity-0 translate-y-5 animate-[splashFadeIn_1s_ease_forwards_0.5s]">
-        Welcome To The Rana Portfolio
-      </h1>
+      <div className="relative px-6 py-4 text-center flex flex-col items-center max-w-[92vw] mx-auto">
+        {/* Glow backdrop */}
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-[#D4AF37]/30 to-primary/20 blur-3xl rounded-full opacity-60 pointer-events-none animate-pulse" />
+
+        <h1 className="relative font-cursive italic text-4xl sm:text-6xl md:text-7xl font-bold bg-gradient-to-r from-[#F5D061] via-[#FFF1B0] to-[#D4AF37] bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(212,175,55,0.4)] tracking-wide leading-tight py-2">
+          {displayedText}
+          <span className="inline-block w-[3px] md:w-[4px] h-[0.85em] bg-[#F5D061] ml-2 align-baseline animate-[blink_0.8s_infinite] shadow-[0_0_12px_#F5D061]" />
+        </h1>
+        
+        <p className="mt-4 text-xs md:text-sm font-code tracking-[0.3em] text-[#D4AF37]/80 uppercase opacity-90 animate-pulse">
+          Crafting Digital Experiences
+        </p>
+      </div>
+
       <style dangerouslySetInnerHTML={{ __html: `
-        @keyframes splashFadeIn {
-          to { opacity: 1; transform: translateY(0); }
+        @keyframes blink {
+          0%, 100% { opacity: 1; }
+          50% { opacity: 0; }
         }
       `}} />
     </div>
