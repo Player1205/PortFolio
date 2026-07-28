@@ -108,6 +108,48 @@ export default function Work() {
           </div>
         </article>
       </div>
+
+      {/* Animated Divider */}
+      <div className="w-full flex justify-center py-12" data-aos="fade-up">
+        <div className="w-full max-w-4xl h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent relative overflow-hidden">
+          <div className="absolute top-0 left-0 h-full w-1/2 bg-gradient-to-r from-transparent via-primary to-transparent animate-pulse translate-x-1/2"></div>
+        </div>
+      </div>
+
+      {/* GuardCall Project Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+        {/* Project 4: GuardCall */}
+        <article className="tilt-card bg-surface-container-low dark:bg-[#201311]est dark:bg-[#1a0f0d] rounded-xl overflow-hidden border border-outline-variant/50 shadow-md flex flex-col h-full hover:border-primary/50 transition-all" data-aos="fade-up" data-aos-delay="100">
+          <div className="h-48 bg-surface-container-highest dark:bg-[#3d2520] relative overflow-hidden group">
+            <div className="absolute inset-0 bg-gradient-to-tr from-error/10 to-transparent"></div>
+            <img alt="Real-time communication" className="w-full h-full object-cover opacity-80 mix-blend-multiply transition-transform duration-500 group-hover:scale-105" data-alt="A conceptual 3D render of a sleek, modern digital interface visualizing real-time audio waveforms morphing into text." src="/PortFolio/assets/guardcall.jpg" />
+            <div className="absolute top-4 right-md bg-surface/80 dark:bg-inverse-surface/80 backdrop-blur-md px-2 py-1 rounded font-code text-code text-secondary dark:text-secondary-fixed flex items-center gap-1">
+              <span className="material-symbols-outlined text-[16px]">record_voice_over</span> AI Agent
+            </div>
+          </div>
+          <div className="p-6 flex flex-col flex-grow gap-4 bg-surface dark:bg-inverse-surface">
+            <div className="flex items-start justify-between gap-2">
+              <h2 className="font-headline-lg-mobile text-headline-lg-mobile text-on-surface dark:text-inverse-on-surface">GuardCall</h2>
+              <div className="flex items-center gap-1 shrink-0">
+                <a aria-label="GitHub" className="text-secondary dark:text-secondary-fixed hover:text-primary transition-colors p-1.5 rounded-lg hover:bg-primary-container/20" href="https://github.com/Player1205/GuardCall" target="_blank" rel="noopener noreferrer" title="GitHub">
+                  <span className="material-symbols-outlined text-[20px]">code</span>
+                </a>
+                <a aria-label="Deployed Site" className="text-secondary dark:text-secondary-fixed hover:text-primary transition-colors p-1.5 rounded-lg hover:bg-primary-container/20" href="https://guardcall-three.vercel.app/" target="_blank" rel="noopener noreferrer" title="Live Demo">
+                  <span className="material-symbols-outlined text-[20px]">rocket_launch</span>
+                </a>
+              </div>
+            </div>
+            <p className="font-body-sm text-body-sm text-on-surface-variant dark:text-secondary-fixed flex-grow">
+              An Agentic AI wiretap that intercepts scams in real-time. Powered by Groq & Deepgram, it detects extortion and provides live coaching to protect users.
+            </p>
+            <div className="flex flex-wrap gap-1 mt-auto pt-4 border-t border-secondary/10">
+              <span className="bg-primary-container/20 text-secondary dark:text-secondary-fixed px-2 py-1 rounded-full font-label-md text-label-md">WebSockets</span>
+              <span className="bg-primary-container/20 text-secondary dark:text-secondary-fixed px-2 py-1 rounded-full font-label-md text-label-md">Groq AI</span>
+              <span className="bg-primary-container/20 text-secondary dark:text-secondary-fixed px-2 py-1 rounded-full font-label-md text-label-md">Deepgram</span>
+            </div>
+          </div>
+        </article>
+      </div>
     </main>
   );
 }
