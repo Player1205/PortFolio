@@ -29,13 +29,13 @@ export default function Work() {
             <div className="p-6 flex flex-col flex-grow gap-4 bg-surface dark:bg-inverse-surface">
               <div className="flex items-start justify-between gap-2">
                 <h2 className="font-headline-lg-mobile text-headline-lg-mobile text-on-surface dark:text-inverse-on-surface">ML-IPL RosterOptimiser</h2>
-                <div className="flex items-center gap-1 shrink-0">
-                  <a aria-label="GitHub" className="text-secondary dark:text-secondary-fixed hover:text-primary transition-colors p-1.5 rounded-lg hover:bg-primary-container/20" href="https://github.com/Player1205/ML-RosterOptimiser" target="_blank" rel="noopener noreferrer" title="GitHub">
-                    <span className="material-symbols-outlined text-[20px]">code</span>
+                <div className="flex items-center gap-3 shrink-0">
+                  <a aria-label="GitHub" className="font-label-md text-label-md font-semibold text-secondary dark:text-secondary-fixed hover:text-primary transition-colors flex items-center gap-0.5" href="https://github.com/Player1205/ML-RosterOptimiser" target="_blank" rel="noopener noreferrer" title="GitHub">
+                    GitHub <span className="material-symbols-outlined text-[14px]">arrow_outward</span>
                   </a>
-                  <button aria-label="Deployed Site" className="not-deployed-btn text-secondary dark:text-secondary-fixed hover:text-primary transition-colors p-1.5 rounded-lg hover:bg-primary-container/20" title="Live Demo">
-                    <span className="material-symbols-outlined text-[20px]">rocket_launch</span>
-                  </button>
+                  <span className="font-label-md text-label-md font-medium text-on-surface-variant/40 dark:text-secondary-fixed/40 cursor-not-allowed" title="Not Deployed">
+                    Live Link
+                  </span>
                 </div>
               </div>
               <p className="font-label-md text-label-md text-on-surface-variant dark:text-secondary-fixed uppercase tracking-wider mb-1">Team: Apex Zero</p>
@@ -62,13 +62,13 @@ export default function Work() {
             <div className="p-6 flex flex-col flex-grow gap-4 bg-surface dark:bg-inverse-surface">
               <div className="flex items-start justify-between gap-2">
                 <h2 className="font-headline-lg-mobile text-headline-lg-mobile text-on-surface dark:text-inverse-on-surface">CampusCoin</h2>
-                <div className="flex items-center gap-1 shrink-0">
-                  <a aria-label="GitHub" className="text-secondary dark:text-secondary-fixed hover:text-primary transition-colors p-1.5 rounded-lg hover:bg-primary-container/20" href="https://github.com/Player1205/CampusCoin" target="_blank" rel="noopener noreferrer" title="GitHub">
-                    <span className="material-symbols-outlined text-[20px]">code</span>
+                <div className="flex items-center gap-3 shrink-0">
+                  <a aria-label="GitHub" className="font-label-md text-label-md font-semibold text-secondary dark:text-secondary-fixed hover:text-primary transition-colors flex items-center gap-0.5" href="https://github.com/Player1205/CampusCoin" target="_blank" rel="noopener noreferrer" title="GitHub">
+                    GitHub <span className="material-symbols-outlined text-[14px]">arrow_outward</span>
                   </a>
-                  <button aria-label="Deployed Site" className="not-deployed-btn text-secondary dark:text-secondary-fixed hover:text-primary transition-colors p-1.5 rounded-lg hover:bg-primary-container/20" title="Live Demo">
-                    <span className="material-symbols-outlined text-[20px]">rocket_launch</span>
-                  </button>
+                  <span className="font-label-md text-label-md font-medium text-on-surface-variant/40 dark:text-secondary-fixed/40 cursor-not-allowed" title="Not Deployed">
+                    Live Link
+                  </span>
                 </div>
               </div>
               <p className="font-body-sm text-body-sm text-on-surface-variant dark:text-secondary-fixed flex-grow">
@@ -94,12 +94,12 @@ export default function Work() {
             <div className="p-6 flex flex-col flex-grow gap-4 bg-surface dark:bg-inverse-surface">
               <div className="flex items-start justify-between gap-2">
                 <h2 className="font-headline-lg-mobile text-headline-lg-mobile text-on-surface dark:text-inverse-on-surface">DataPassport</h2>
-                <div className="flex items-center gap-1 shrink-0">
-                  <a aria-label="GitHub" className="text-secondary dark:text-secondary-fixed hover:text-primary transition-colors p-1.5 rounded-lg hover:bg-primary-container/20" href="https://github.com/Player1205/DataPassport" target="_blank" rel="noopener noreferrer" title="GitHub">
-                    <span className="material-symbols-outlined text-[20px]">code</span>
+                <div className="flex items-center gap-3 shrink-0">
+                  <a aria-label="GitHub" className="font-label-md text-label-md font-semibold text-secondary dark:text-secondary-fixed hover:text-primary transition-colors flex items-center gap-0.5" href="https://github.com/Player1205/DataPassport" target="_blank" rel="noopener noreferrer" title="GitHub">
+                    GitHub <span className="material-symbols-outlined text-[14px]">arrow_outward</span>
                   </a>
-                  <a aria-label="Deployed Site" className="text-secondary dark:text-secondary-fixed hover:text-primary transition-colors p-1.5 rounded-lg hover:bg-primary-container/20" href="https://datapassport-frontend.netlify.app/" target="_blank" rel="noopener noreferrer" title="Live Demo">
-                    <span className="material-symbols-outlined text-[20px]">rocket_launch</span>
+                  <a aria-label="Live Link" className="font-label-md text-label-md font-semibold text-primary dark:text-primary-fixed hover:underline transition-colors flex items-center gap-0.5" href="https://datapassport-frontend.netlify.app/" target="_blank" rel="noopener noreferrer" title="Live Link">
+                    Live Link <span className="material-symbols-outlined text-[14px]">arrow_outward</span>
                   </a>
                 </div>
               </div>
@@ -138,12 +138,12 @@ export default function Work() {
             <div className="p-6 flex flex-col flex-grow gap-4 bg-surface dark:bg-inverse-surface">
               <div className="flex items-start justify-between gap-2">
                 <h2 className="font-headline-lg-mobile text-headline-lg-mobile text-on-surface dark:text-inverse-on-surface">GuardCall</h2>
-                <div className="flex items-center gap-1 shrink-0">
-                  <a aria-label="GitHub" className="text-secondary dark:text-secondary-fixed hover:text-primary transition-colors p-1.5 rounded-lg hover:bg-primary-container/20" href="https://github.com/Player1205/GuardCall" target="_blank" rel="noopener noreferrer" title="GitHub">
-                    <span className="material-symbols-outlined text-[20px]">code</span>
+                <div className="flex items-center gap-3 shrink-0">
+                  <a aria-label="GitHub" className="font-label-md text-label-md font-semibold text-secondary dark:text-secondary-fixed hover:text-primary transition-colors flex items-center gap-0.5" href="https://github.com/Player1205/GuardCall" target="_blank" rel="noopener noreferrer" title="GitHub">
+                    GitHub <span className="material-symbols-outlined text-[14px]">arrow_outward</span>
                   </a>
-                  <a aria-label="Deployed Site" className="text-secondary dark:text-secondary-fixed hover:text-primary transition-colors p-1.5 rounded-lg hover:bg-primary-container/20" href="https://guardcall-three.vercel.app/" target="_blank" rel="noopener noreferrer" title="Live Demo">
-                    <span className="material-symbols-outlined text-[20px]">rocket_launch</span>
+                  <a aria-label="Live Link" className="font-label-md text-label-md font-semibold text-primary dark:text-primary-fixed hover:underline transition-colors flex items-center gap-0.5" href="https://guardcall-three.vercel.app/" target="_blank" rel="noopener noreferrer" title="Live Link">
+                    Live Link <span className="material-symbols-outlined text-[14px]">arrow_outward</span>
                   </a>
                 </div>
               </div>
