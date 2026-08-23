@@ -7,9 +7,11 @@
   opacity: 1;
   height: 100vh;
   width: var(--cWidth);
-  max-width: 1920px;
+  max-width: 100%;
   margin: auto;
   z-index: 9;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 .what-box {
   width: 50%;
@@ -316,6 +318,10 @@
 @media only screen and (max-width: 900px) {
   .whatIDO {
     flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+    padding: 50px 0;
+    overflow: visible;
   }
   .what-box h2 {
     margin: 50px 0;
