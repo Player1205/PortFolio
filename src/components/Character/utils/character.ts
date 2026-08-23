@@ -45,10 +45,14 @@ const setCharacter = (
               }
             });
             resolve(gltf);
-            if (window.innerWidth > 1024) {
-              setCharTimeline(character, camera);
+            try {
+              if (window.innerWidth > 1024) {
+                setCharTimeline(character, camera);
+              }
+              setAllTimeline();
+            } catch (err) {
+              console.error("GSAP Animation Initialization Error:", err);
             }
-            setAllTimeline();
             character!.getObjectByName("footR")!.position.y = 3.36;
             character!.getObjectByName("footL")!.position.y = 3.36;
 
