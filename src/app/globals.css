@@ -75,7 +75,7 @@ a:hover {
 }
 
 .character-container {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
@@ -83,6 +83,12 @@ a:hover {
   height: 100svh;
   pointer-events: none;
   z-index: 10;
+}
+
+@media screen and (min-width: 1025px) {
+  .character-container {
+    position: fixed;
+  }
 }
 
 .character-model {
