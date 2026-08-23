@@ -36,6 +36,16 @@ const Loading = ({ percent }: { percent: number }) => {
     }
   }, [percent, clicked, handleEnter]);
 
+  // Failsafe timeout: If 8 seconds pass, forcefully resolve the loader
+  // This prevents mobile users from getting stuck at 0% or 65% due to WebGL/Network failures
+  useEffect(() => {
+    const failsafe = setTimeout(() => {
+      setLoaded(true);
+      handleEnter();
+    }, 8000);
+    return () => clearTimeout(failsafe);
+  }, [handleEnter]);
+
   function handleMouseMove(e: React.MouseEvent<HTMLElement>) {
     const { currentTarget: target } = e;
     const rect = target.getBoundingClientRect();

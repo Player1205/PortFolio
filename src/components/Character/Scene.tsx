@@ -79,6 +79,8 @@ const Scene = () => {
         }
       }).catch((err) => {
         console.error("Error in loadCharacter:", err);
+        // Force the loading screen to finish so the site is still usable
+        progress.loaded();
       });
 
       let mouse = { x: 0, y: 0 },
