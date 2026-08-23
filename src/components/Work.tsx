@@ -9,22 +9,25 @@ const projects = [
   {
     title: "GuardCall AI",
     category: "Agentic Scam Detection & Real-Time Interceptor",
+    description: "An ultra-low-latency real-time voice wiretap pipeline that streams live telephone audio over WebSockets. It leverages Groq LPU inference to transcribe, detect social engineering fraud, and inject tactical counter-measures in sub-second intervals.",
     tools: "Groq LPU, Deepgram, Fastify, Next.js, WebRTC",
-    image: "/assets/guardcall.jpg",
+    image: "assets/guardcall.jpg",
     link: "https://github.com/Player1205/GuardCall",
   },
   {
     title: "ML-IPL Roster Optimizer",
     category: "Algorithmic Predictive Machine Learning Engine",
+    description: "An end-to-end algorithmic auction intelligence engine using advanced regression models to calculate player valuation matrices, risk indices, and multi-constraint roster optimization for professional sports franchises.",
     tools: "Python, Scikit-Learn, Pandas, Fastify, Streamlit",
-    image: "/assets/images/ml_ipl_optimizer.jpg",
+    image: "assets/images/ml_ipl_optimizer.jpg",
     link: "https://github.com/Player1205/ML-IPL-RosterOptimiser",
   },
   {
     title: "DataPassport",
     category: "Data Verification & Management System",
+    description: "A secure, high-performance data node interface designed for rigorous identity verification and blockchain-backed transaction logging, ensuring data integrity and seamless audit trails across distributed networks.",
     tools: "React, Node.js, TypeScript, Next.js",
-    image: "/assets/images/data_passport.jpg",
+    image: "assets/images/data_passport.jpg",
     link: "https://github.com/Player1205/DataPassport",
   },
 ];
@@ -99,6 +102,7 @@ const Work = () => {
                       <div className="carousel-details">
                         <h4>{project.title}</h4>
                         <p className="carousel-category">{project.category}</p>
+                        <p className="carousel-description">{project.description}</p>
                         <div className="carousel-tools">
                           <span className="tools-label">Tools:</span> {project.tools}
                         </div>

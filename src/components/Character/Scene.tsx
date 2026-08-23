@@ -14,6 +14,7 @@ import {
 } from "./utils/mouseUtils";
 import setAnimations from "./utils/animationUtils";
 import { setProgress } from "../Loading";
+import { setAllTimeline } from "../utils/GsapScroll";
 
 const Scene = () => {
   const canvasDiv = useRef<HTMLDivElement | null>(null);
@@ -22,6 +23,7 @@ const Scene = () => {
   const { setLoading } = useLoading();
 
   const [character, setChar] = useState<THREE.Object3D | null>(null);
+  const [hasError, setHasError] = useState(false);
   useEffect(() => {
     if (canvasDiv.current) {
       let rect = canvasDiv.current.getBoundingClientRect();
@@ -42,7 +44,7 @@ const Scene = () => {
       const camera = new THREE.PerspectiveCamera(14.5, aspect, 0.1, 1000);
       camera.position.z = 10;
       camera.position.set(0, 13.1, 24.7);
-      camera.zoom = 1.1;
+      camera.zoom = window.innerWidth <= 1024 ? 0.7 : 1.1;
       camera.updateProjectionMatrix();
 
       let headBone: THREE.Object3D | null = null;
@@ -79,8 +81,11 @@ const Scene = () => {
         }
       }).catch((err) => {
         console.error("Error in loadCharacter:", err);
+        setHasError(true);
         // Force the loading screen to finish so the site is still usable
         progress.loaded();
+        // Register DOM animations so the rest of the site is visible
+        setAllTimeline();
       });
 
       let mouse = { x: 0, y: 0 },
@@ -154,7 +159,7 @@ const Scene = () => {
 
   return (
     <>
-      <div className="character-container">
+      <div className={`character-container ${hasError ? "hidden" : ""}`}>
         <div className="character-model" ref={canvasDiv}>
           <div className="character-rim"></div>
           <div className="character-hover" ref={hoverDivRef}></div>
