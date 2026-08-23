@@ -367,4 +367,4 @@ h2.landing-info-h2 {
   h2.landing-info-h2 {
     font-size: 75px;
   }
-}
+}@media only screen and (max-width: 900px) { .character-rim { display: none !important; } }
