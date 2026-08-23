@@ -345,6 +345,7 @@
   .what-box-in {
     margin-left: 0px;
     height: 450px;
+    display: flex;
   }
   .what-content h5,
   .what-content-flex {

@@ -9,6 +9,12 @@ const WhatIDo = () => {
   const setRef = (el: HTMLDivElement | null, index: number) => {
     containerRef.current[index] = el;
   };
+
+  const handleClick = (container: HTMLDivElement) => {
+    container.classList.toggle("what-content-active");
+    container.classList.toggle("what-sibling");
+  };
+
   useEffect(() => {
     if (ScrollTrigger.isTouch) {
       containerRef.current.forEach((container) => {

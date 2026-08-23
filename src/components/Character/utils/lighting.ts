@@ -30,7 +30,7 @@ const setLighting = (scene: THREE.Scene) => {
 
   // Studio HDR Environment map
   new RGBELoader()
-    .setPath("/models/")
+    .setPath("models/")
     .load("char_enviorment.hdr?v=2", function (texture) {
       texture.mapping = THREE.EquirectangularReflectionMapping;
       scene.environment = texture;
