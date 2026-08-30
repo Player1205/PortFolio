@@ -41,7 +41,8 @@ const setCharacter = (
 
                 // Hide monitor and screenlight on mobile
                 if (window.innerWidth <= 1024) {
-                  if (mesh.name === "screenlight" || mesh.material?.name === "Material.018") {
+                  const mat = mesh.material as THREE.Material;
+                  if (mesh.name === "screenlight" || mat?.name === "Material.018") {
                     mesh.visible = false;
                   }
                 }
