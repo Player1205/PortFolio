@@ -21,6 +21,14 @@ const setCharacter = (
           "models/character.glb",
           async (gltf) => {
             character = gltf.scene;
+
+            if (window.innerWidth <= 1024) {
+              const plane004 = character.getObjectByName("Plane004");
+              if (plane004) plane004.visible = false;
+              const screenlight = character.getObjectByName("screenlight");
+              if (screenlight) screenlight.visible = false;
+            }
+
             await renderer.compileAsync(character, camera, scene);
             character.traverse((child: any) => {
               if (child.isMesh) {
@@ -36,14 +44,6 @@ const setCharacter = (
                     const newMat = (mesh.material as THREE.Material).clone() as THREE.MeshStandardMaterial;
                     newMat.color = new THREE.Color("#000000");
                     mesh.material = newMat;
-                  }
-                }
-
-                // Hide monitor and screenlight on mobile
-                if (window.innerWidth <= 1024) {
-                  const mat = mesh.material as THREE.Material;
-                  if (mesh.name === "screenlight" || mat?.name === "Material.018") {
-                    mesh.visible = false;
                   }
                 }
 
