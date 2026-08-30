@@ -346,4 +346,44 @@
   .work-image img {
     max-height: 250px;
   }
+}.carousel-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.carousel-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.carousel-link.github-btn {
+  background: transparent;
+  color: #fff;
+}
+
+.carousel-link.github-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.carousel-link.deploy-btn {
+  background: var(--accentColor, #5eead4);
+  color: #0a0e17;
+  border-color: var(--accentColor, #5eead4);
+  font-weight: 600;
+}
+
+.carousel-link.deploy-btn:hover {
+  background: transparent;
+  color: var(--accentColor, #5eead4);
 }

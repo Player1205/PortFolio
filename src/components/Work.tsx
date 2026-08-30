@@ -12,7 +12,8 @@ const projects = [
     description: "An ultra-low-latency real-time voice wiretap pipeline that streams live telephone audio over WebSockets. It leverages Groq LPU inference to transcribe, detect social engineering fraud, and inject tactical counter-measures in sub-second intervals.",
     tools: "Groq LPU, Deepgram, Fastify, Next.js, WebRTC",
     image: "assets/guardcall.jpg",
-    link: "https://github.com/Player1205/GuardCall",
+    githubLink: "https://github.com/Player1205/GuardCall",
+    deployedLink: "#",
   },
   {
     title: "ML-IPL Roster Optimizer",
@@ -20,7 +21,8 @@ const projects = [
     description: "An end-to-end algorithmic auction intelligence engine using advanced regression models to calculate player valuation matrices, risk indices, and multi-constraint roster optimization for professional sports franchises.",
     tools: "Python, Scikit-Learn, Pandas, Fastify, Streamlit",
     image: "assets/images/ml_ipl_optimizer.jpg",
-    link: "https://github.com/Player1205/ML-IPL-RosterOptimiser",
+    githubLink: "https://github.com/Player1205/ML-IPL-RosterOptimiser",
+    deployedLink: "#",
   },
   {
     title: "DataPassport",
@@ -28,7 +30,8 @@ const projects = [
     description: "A secure, high-performance data node interface designed for rigorous identity verification and blockchain-backed transaction logging, ensuring data integrity and seamless audit trails across distributed networks.",
     tools: "React, Node.js, TypeScript, Next.js",
     image: "assets/images/data_passport.jpg",
-    link: "https://github.com/Player1205/DataPassport",
+    githubLink: "https://github.com/Player1205/DataPassport",
+    deployedLink: "#",
   },
 ];
 
@@ -106,24 +109,37 @@ const Work = () => {
                         <div className="carousel-tools">
                           <span className="tools-label">Tools:</span> {project.tools}
                         </div>
-                        {project.link && (
-                          <a
-                            href={project.link}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="carousel-link"
-                            data-cursor="disable"
-                          >
-                            View Project &rarr;
-                          </a>
-                        )}
+                        <div className="carousel-buttons">
+                          {project.githubLink && (
+                            <a
+                              href={project.githubLink}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="carousel-link github-btn"
+                              data-cursor="disable"
+                            >
+                              View on GitHub &rarr;
+                            </a>
+                          )}
+                          {project.deployedLink && (
+                            <a
+                              href={project.deployedLink}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="carousel-link deploy-btn"
+                              data-cursor="disable"
+                            >
+                              Live Demo &rarr;
+                            </a>
+                          )}
+                        </div>
                       </div>
                     </div>
                     <div className="carousel-image-box">
                       <WorkImage
                         image={project.image}
                         alt={project.title}
-                        link={project.link}
+                        link={project.githubLink}
                       />
                     </div>
                   </div>
